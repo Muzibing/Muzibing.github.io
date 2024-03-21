@@ -10,13 +10,13 @@
         <meta name="author" content="Cai Jiawei">
       
       
-        <link rel="canonical" href="http://Muzibing.github.io/Tutorial/python/">
+        <link rel="canonical" href="http://Muzibing.github.io/Tutorial/%E8%8C%83%E4%BE%8B/">
       
       
-        <link rel="prev" href="../Java/">
+        <link rel="prev" href="../c%2B%2B/">
       
       
-        <link rel="next" href="../c%2B%2B/">
+        <link rel="next" href="../../about/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Python - MuZibing(Cai Jiawei)'s website</title>
+        <title>Markdown使用范例 - MuZibing(Cai Jiawei)'s website</title>
       
     
     
@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -97,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python
+              Markdown使用范例
             
           </span>
         </div>
@@ -310,17 +315,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -329,7 +327,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -360,10 +357,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../%E8%8C%83%E4%BE%8B/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Markdown使用范例
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -372,6 +389,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      共有六级标题，如此处展示
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -421,6 +467,25 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      共有六级标题，如此处展示
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -435,9 +500,54 @@
                   
 
 
-  <h1>Python</h1>
-
-
+<h1 id="_1">使用#添加标题</h1>
+<h2 id="_2">共有六级标题，如此处展示</h2>
+<p>使用\$xx\$添加公式，使用$\$xx$\$添加公式块<br>
+$\sum_{i=1}^{n}a_i$ </p>
+<p>$$\sum_{i=1}^{n}a_i$$ </p>
+<p>使用<code>aa xx</code>添加代码块,aa处填写语言名</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+int main()
+{
+printf(&quot;Hello World!&quot;);
+return 0;
+}
+</code></pre>
+<p>使用`xx`添加代码<br>
+<code>printf()</code></p>
+<p>1.
+2.
+3.
+$$
+x~1+x~2=4
+$$</p>
+<p>$$
+y^3=8
+$$</p>
+<p>欢迎来到<a href="http://www.baidu.com">百度</a></p>
+<p><u><em>123</em></u>                                                            <strong>居中</strong></p>
+<p><img src="D:\TyporaPictures\七海千秋.jpeg" style="zoom:50%;" /></p>
+<p>~~123~~</p>
+<p>123
+123<br/>123</p>
+<p>单行代码</p>
+<pre><code class="language-python">print(&quot;Hello python!&quot;&quot;)
+</code></pre>
+<pre><code class="language-c">int a=1;
+</code></pre>
+<p>use the <!--注释--></p>
+<pre><code class="language-c">use the &quot;printf()&quot; function
+</code></pre>
+<p>:small_airplane:</p>
+<hr />
+<blockquote>
+<p>引用一下</p>
+<p>双按换行跳出</p>
+</blockquote>
+<p>脚注产生的方法[^footnote]</p>
+<p>use </p>
+<p>$$</p>
+<p>$$</p>
 
 
 
