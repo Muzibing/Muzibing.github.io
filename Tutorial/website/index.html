@@ -458,16 +458,23 @@
 
   <h1>如何制作一个像这样的个人主页</h1>
 
+<p>我是采用mkdocs+github repo的方式进行配置的</p>
+<p>前置需要的东西包括python环境，安装mkdocs，github创建仓库等这里就不多赘述了</p>
+<p>注意：如果想要直接从 http://xxx.github.io 就能访问个人主页，需要在github创建一个名为xxx.github.io的仓库，一个字母都不能改！！</p>
 <p>记住几个命令：</p>
-<p>mkdocs serve</p>
+<p><code>mkdocs serve</code></p>
 <p>在创建的本地文件夹目录下使用，即可在127.0.0.1:8000访问到网站</p>
 <p>部署到服务器：</p>
-<p>mkdocs build</p>
+<p><code>mkdocs build</code></p>
 <p>在创建的本地文件夹目录下使用，这个命令会在本地目录下生成一个目录site，这个目录中包含了静态站点的页面内容</p>
-<p>mkdocs gh-deploy </p>
+<p><code>mkdocs gh-deploy</code> </p>
 <p>远程连接github的仓库与本地的文件夹</p>
-<p>mkdocs gh-deploy --config-file ../{learn-mkdocs}/mkdocs.yml --remote-branch master</p>
+<p><code>mkdocs gh-deploy --config-file ../{learn-mkdocs}/mkdocs.yml --remote-branch master</code></p>
 <p>创建xxx.github.io的步骤，手动连接文件夹与仓库</p>
+<p>我这里这个命令就是：</p>
+<p><code>mkdocs gh-deploy --config-file ../mkdocs-site/mkdocs.yml --remote-branch master</code></p>
+<p>上述两个<code>gh-deploy</code>命令：注意需要在xxx.github.io文件夹的目录下git</p>
+<p>每次修改网站的时候，直接在mkdocs-site文件夹（可以自己命名）修改完毕并保存后，先使用<code>mkdocs serve</code>命令（修改本地）（这个命令可能较慢，需要稍稍等待一下，不过在本地网站预览，同步完成后就关闭，暂未发现明显异常），再使用<code>mkdocs gh-deploy --config-file ../{learn-mkdocs}/mkdocs.yml --remote-branch master</code>（同步到github） 注意两个命令git的文件夹不同，第一个是在自己创立的mkdocs-site文件夹下，第二个是在xxx.github.io下</p>
 <p><a href="https://blog.csdn.net/qq_41261251/article/details/116021097#:~:text=%E4%BB%8E%E5%A4%B4%E6%95%99%E4%BD%A0%E7%94%A8mkdocs%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F~%201%201.%20mkdocs%E4%BB%8B%E7%BB%8D%20MkDocs%20is%20a%20fast%2C,mkdocs%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%203.1%20%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%20...%204%204.%20%E9%83%A8%E7%BD%B2%E7%AB%99%E7%82%B9%20">我参考了这个文档</a></p>
 <p>你也可以点击
 <a href="https://wdk-docs.github.io/mkdocs-docs/">官方教程</a> 进行学习</p>
