@@ -1,0 +1,7 @@
+/* 强制显示头像并设置尺寸 */
+.md-header-nav .md-avatar img {
+    width: 150px;       /* 调整头像宽度 */
+    height: 150px;      /* 调整头像高度 */
+    border-radius: 50%; /* 设置头像为圆形 */
+    object-fit: cover;  /* 保持图片比例，避免拉伸 */
+}
