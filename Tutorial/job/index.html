@@ -10,13 +10,9 @@
         <meta name="author" content="Cai Jiawei">
       
       
-        <link rel="canonical" href="http://Muzibing.github.io/Tutorial/website/">
+        <link rel="canonical" href="http://Muzibing.github.io/Tutorial/job/">
       
       
-        <link rel="prev" href="../pta2/">
-      
-      
-        <link rel="next" href="../about/">
       
       
       <link rel="icon" href="../../img/qhqq.jpg">
@@ -24,7 +20,7 @@
     
     
       
-        <title>如何制作一个像这样的个人主页 - MuZibing(Cai Jiawei)'s website</title>
+        <title>Job - MuZibing(Cai Jiawei)'s website</title>
       
     
     
@@ -77,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -108,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              如何制作一个像这样的个人主页
+              Job
             
           </span>
         </div>
@@ -267,19 +268,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -293,7 +292,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             自制的一点点教程
@@ -431,17 +430,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../website/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -450,7 +442,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -564,6 +555,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      智力题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据库
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -580,29 +597,19 @@
   
 
 
-  <h1>如何制作一个像这样的个人主页</h1>
+  <h1>Job</h1>
 
-<p>我是采用mkdocs+github repo的方式进行配置的</p>
-<p>前置需要的东西包括python环境，安装mkdocs，github创建仓库等这里就不多赘述了</p>
-<p>注意：如果想要直接从 http://xxx.github.io 就能访问个人主页，需要在github创建一个名为xxx.github.io的仓库，一个字母都不能改！！</p>
-<p>记住几个命令：</p>
-<p><code>mkdocs serve</code></p>
-<p>在创建的本地文件夹目录下使用，即可在127.0.0.1:8000访问到网站</p>
-<p>部署到服务器：</p>
-<p><code>mkdocs build</code></p>
-<p>在创建的本地文件夹目录下使用，这个命令会在本地目录下生成一个目录site，这个目录中包含了静态站点的页面内容</p>
-<p><code>mkdocs gh-deploy</code> </p>
-<p>远程连接github的仓库与本地的文件夹</p>
-<p><code>mkdocs gh-deploy --config-file ../{learn-mkdocs}/mkdocs.yml --remote-branch master</code></p>
-<p>创建xxx.github.io的步骤，手动连接文件夹与仓库</p>
-<p>我这里这个命令就是：</p>
-<p><code>mkdocs gh-deploy --config-file ../mkdocs-site/mkdocs.yml --remote-branch master</code></p>
-<p>上述两个<code>gh-deploy</code>命令：注意需要在xxx.github.io文件夹的目录下git</p>
-<p>每次修改网站的时候，直接在mkdocs-site文件夹（可以自己命名）修改完毕并保存后，先使用<code>mkdocs serve</code>命令（修改本地）（这个命令可能较慢，需要稍稍等待一下，不过在本地网站预览，同步完成后就关闭，暂未发现明显异常），再使用<code>mkdocs gh-deploy --config-file ../{learn-mkdocs}/mkdocs.yml --remote-branch master</code>（同步到github） 注意两个命令git的文件夹不同，第一个是在自己创立的mkdocs-site文件夹下，第二个是在xxx.github.io下</p>
-<p><a href="https://blog.csdn.net/qq_41261251/article/details/116021097#:~:text=%E4%BB%8E%E5%A4%B4%E6%95%99%E4%BD%A0%E7%94%A8mkdocs%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F~%201%201.%20mkdocs%E4%BB%8B%E7%BB%8D%20MkDocs%20is%20a%20fast%2C,mkdocs%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%203.1%20%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%20...%204%204.%20%E9%83%A8%E7%BD%B2%E7%AB%99%E7%82%B9%20">我参考了这个文档</a></p>
-<p>你也可以点击
-<a href="https://wdk-docs.github.io/mkdocs-docs/">官方教程</a> 进行学习</p>
-<p>ps：问问ChatGPT，我创建的时候有很多奇怪的报错，网上搜索没有找到类似案例，而GPT在我的引导下很快地帮我解决了</p>
+<p>怎么找工作这么难......</p>
+<p>2024.2.10
+今天和Jack讨论中间结果的导出方式（单方面被输出），C++和Python都分别包装好了中间结果的返回值，C++得到了一个结构的指针，里面有很多函数和变量，Python得到了一个list，里面有很多个嵌套的obj（obj是函数名，callable的，可以分别get value，部分需要传参数），Jack认为需要统一格式，比如Python去调用C++的函数，这样以后修改的时候，只需要修改C++的代码。但我觉得不可行，首先函数名都不一样，其次传参的方式也不一样（比如C++有引用传递，也有返回值传递，Python都是返回值传递），如果添加判断的话，还不如直接分开处理。如果在Python中调用C++函数，为了导出中间结果数据，专门编译出.dll文件也很麻烦。Jack又提出直接比较内存块，因为保存方式都是连续存在内存里面的，但我不会这种方式，且这种方式如果发现错误不好比较哪方面是错的。对于Jack质疑的分别处理的方法，我已经统一了导出的格式，依照Python修改了C++的部分，所以格式已经相同。最终勉强维持原方法而结束。</p>
+<h2 id="_1">智力题</h2>
+<p>https://www.nowcoder.com/discuss/374239272688254976</p>
+<p>https://www.nowcoder.com/discuss/353155459769114624</p>
+<h2 id="_2">数据库</h2>
+<p>索引
+https://blog.csdn.net/weixin_51486343/article/details/113351092</p>
+<p>ACID
+https://blog.csdn.net/qq_39390545/article/details/116452271</p>
 
 
 

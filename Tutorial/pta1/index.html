@@ -1,0 +1,1091 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Cai Jiawei">
+      
+      
+        <link rel="canonical" href="http://Muzibing.github.io/Tutorial/pta1/">
+      
+      
+        <link rel="prev" href="../include/">
+      
+      
+        <link rel="next" href="../pta2/">
+      
+      
+      <link rel="icon" href="../../img/qhqq.jpg">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>第一章 - MuZibing(Cai Jiawei)'s website</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="MuZibing(Cai Jiawei)&#39;s website" class="md-header__button md-logo" aria-label="MuZibing(Cai Jiawei)'s website" data-md-component="logo">
+      
+  <img src="../../img/qhqq.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MuZibing(Cai Jiawei)'s website
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第一章
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Muzibing/2022_SE_courses/tree/main" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    我的课程资料仓库也可以点这里！
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MuZibing(Cai Jiawei)&#39;s website" class="md-nav__button md-logo" aria-label="MuZibing(Cai Jiawei)'s website" data-md-component="logo">
+      
+  <img src="../../img/qhqq.jpg" alt="logo">
+
+    </a>
+    MuZibing(Cai Jiawei)'s website
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Muzibing/2022_SE_courses/tree/main" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    我的课程资料仓库也可以点这里！
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    主页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    自制的一点点教程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            自制的一点点教程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计院专业分流
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python程序设计pta题目解答
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python程序设计pta题目解答
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../include/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    第一章
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    第一章
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      理论
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="理论">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      判断题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      填空题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      实验
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pta2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    第二章
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../website/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何制作一个像这样的个人主页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    大学课程统计
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    实用技能
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            实用技能
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    git和github
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      理论
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="理论">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      判断题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      填空题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      实验
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="python">一. Python语言概述</h1>
+<h2 id="_1">理论</h2>
+<h3 id="_2">判断题</h3>
+<p>1 高级语言程序要被机器执行,只有用解释器来解释执行。
+ <br />
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>错误:</strong> 计算机高级语言按程序的执行方式可以分为编译型和解释型两种，编译型是通过编译器把源码编译为机器语言，再执行，解释型是把每行代码逐行‘翻译’成目标代码。可以看出，应用程序不能脱离解释器，但是这种方式比较灵活。我们上面配置的Python环境，就是在安装Python的解释器。编译型每次修改，都需要修改源代码，再重新编译才能执行。编译型语言包括：C，C++，汇编语言等，解释型语言包括：Python，JavaScript等。
+</div>
+</p>
+<p>2 不可以在同一台计算机上安装多个不同的Python解释器版本。
+ <br />
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>错误:</strong> 可以。
+</div>
+</p>
+<p>3 Python是一种跨平台、开源、免费的动态编程语言。
+ <br />
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>正确:</strong> 跨平台：可以在不同操作系统和硬件平台上运行而不需要太多修改。开源、免费：所有人都可以免费使用Python和查看源代码。动态：运行时才确定数据类型的语言，变量在使用之前无需申明类型，通常变量的值是被赋值的那个值的类型。比如Python、Php、Asp、JavaScript、Perl等等。静态语言使用变量时需要先声明数据类型。
+</div>
+</p>
+<p>4 math模块是python语言的数学模块。
+ <br />
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>正确:</strong> Python模块(Module)，是一个Python文件，以```.py```结尾，包含了Python对象定义和Python语句。模块让你能够有逻辑地组织你的Python代码段。把相关的代码分配到一个模块里能让你的代码更好用，更易懂。模块能定义函数，类和变量，模块里也能包含可执行的代码。```math```就是数学模块。
+</div>
+</p>
+<p>5 在Python 3.x中，input()函数把用户的键盘输入作为字符串返回。 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>正确:</strong> <code>input()</code>函数作为字符串输入，返回值是一个字符串。你可以通过
+  <code>a=input()
+  print(type(a))</code> 
+  来查看返回值的类型。
+</div></p>
+<p>6 print()函数是输出函数。
+ <br />
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>正确</strong> 
+</div>
+</p>
+<p>7 在Python中，可以用else作为变量名。
+ <br />
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>错误:</strong> python的变量名命名规则如下：1.变量名必须以字母（a-z, A-Z）或下划线（_）开头，不能以数字开头。2.变量名只能包含字母、数字和下划线（a-z, A-Z, 0-9, _）。3.变量名是大小写敏感的，这意味着MyVar和myvar是两个不同的变量。4.避免使用Python的关键字作为变量名，例如True, False, None, and, as, assert, break等。你可以通过
+  ```
+  import keyword 
+  print(keyword.kwlist)
+  ```
+  来查看关键字。
+</div>
+</p>
+<p>8 已知 x=3, 则执行“ x=7”后，id(x)的返回值与原来没有变化。      <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>错误:</strong> 在Python中，id()函数用于获取对象的唯一标识符，该标识符是一个整数，通常代表对象在内存中的地址。Python为了提高内存利用效率，对于一些简单且常用的对象（如小整数和短字符串）会重用对象内存。例如，两个变量指向同一个整数对象时，它们实际上指向相同的内存地址。当变量被赋予新值时，Python并不是修改原有对象的值，而是在内存中创建一个新对象，并更新变量的引用。因此，变量在赋予新值前后的id()值会不同。
+</div></p>
+<p>9 字母A的ASCII编码值和Unicode编码值相同。
+<br />
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>正确:</strong> 1. ASCII编码是8bit的等长编码，可以表示常见的英文字母，符号和数字。保存了128个，码值分别为0-127（为什么不是2^8=256个呢？因为第一个二进制位都是0）。例如常见的'a'字母ASCII码值为97,'A'字母ASCII码值为65,'0'的ASCII码值为48。字母和数字的ASCII码值是连续的。2. Unicode编码是一个符号集，可容纳100多万个符号，每个符号都有独一无二的编码，其中ASCII编码是Unicode编码的子集。不过Unicode编码的问题是，如果传递很长一串编码，接收者不知道第一个字是一个字节还是两个字节还是其他字节数量。如果统一，又会占据较大空间。3. UTF-8编码是Unicode的实现方式之一。采用变长的编码方式，利用少数几位字节来表示字节数，从而节约了空间且不会出错。python采用的默认编码方式为UTF-8。如果想了解更多信息，可以查看[链接](https://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html)。
+</div>
+</p>
+<p>10 下面程序输入是3 5，输出是8。  </p>
+<pre><code class="language-python">  m,n=int(input().split())
+  print(m+n)
+</code></pre>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>错误:</strong> 如果你放到编译器里跑一下，会出现这样的提示：3 5
+Traceback (most recent call last):
+  File "e:\vspy\text.py", line 1, in module
+    m,n=int(input().split())
+        ^^^^^^^^^^^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'list' 这是因为split()函数返回的是一个列表，而int()函数只能接受字符串作为参数。如果想要修改，可以写成 m,n=map(int,input().split()) ,这是因为map()函数可以将一个函数作用在可迭代对象上，返回一个迭代器。即对每个输入的数据都使用int()函数来转换。大家可以记住这个写法，编程题会经常用到。
+</div>
+
+<p>11 下面程序的输出是5。  </p>
+<pre><code class="language-python">print=3
+print(5)
+</code></pre>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>错误:</strong> 
+</div>
+
+<h3 id="_3">选择题</h3>
+<p>1 计算机存储器的单位是字节（B,Byte）,1B等于<strong><em>_</em></strong>___。</p>
+<p>A.
+一位二进制</p>
+<p>B.
+四位二进制</p>
+<p>C.
+八位二进制</p>
+<p>D.
+十六位二进制</p>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>C:</strong> 单位换算：一个二进制位是一个比特(bit),1b,8个bit是一个字节(byte),1B(荒野乱斗有个觉得叫8-bit哈哈哈哈哈哈哈哈) 我们日常在电脑中见到的kb,mb,gb,1kb,1mb,1gb都是以byte为单位的。分别是1024(2^10),2^20,2^30,因为2^10=1024和1k比较接近，所以一般用k来方便表示。(其实具体说1KB表示1000bytes，1KiB才是1024bytes,不过一般已经混淆化，不是特别关键)。
+</div>
+
+<p>2 Python程序在Windows上的扩展名是<strong><em>_</em></strong>__。</p>
+<p>A.
+py</p>
+<p>B.
+exe</p>
+<p>C.
+docx</p>
+<p>D.
+jpg</p>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>A:</strong> .exe是可执行文件的后缀(executable),.docx是文档文件,.jpg是图片文件
+</div>
+
+<p>3 Python的输出函数是<strong><em>_</em></strong>_。</p>
+<p>A.
+input()</p>
+<p>B.
+print()</p>
+<p>C.
+math()</p>
+<p>D.
+turtle()</p>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>B:</strong> input()是输入函数，math()不是一个函数，math是数学模块，turtle是Python的绘图模块。
+</div>
+
+<p>4 10的二进制值是<strong><em>_</em></strong>___。</p>
+<p>A.
+1100</p>
+<p>B.
+1010</p>
+<p>C.
+0011</p>
+<p>D.
+1110</p>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>B:</strong> 进制转换：二进制转十进制：最低位代表2^0,如果为1,就给十进制加上2^0*1,如果为0就不加，倒数第二位代表2^1,如果为1就加上2^1*1,以此类推。十进制转二进制：把这个十进制数拆成2的立方数的和：例如把45拆成2^5+2^3+2^2+2^0，即写成101101。其他进制之间的转换也是类似的。一般的数字默认十进制，二进制的前缀是（0B/0b,binary)。需要注意的是，这只是二进制原码的转换方法，二进制还具有反码和补码，下面遇到题目了再详细说明。
+</div>
+
+<p>5 八进制35的十进制值是<strong><em>_</em></strong>__。</p>
+<p>A.
+30</p>
+<p>B.
+25</p>
+<p>C.
+19</p>
+<p>D.
+29</p>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>D:</strong> 3*8^1+5*8^0=24+5=29
+</div>
+
+<p>6 计算机系统由硬件和<strong><em>_</em></strong>_组成。</p>
+<p>A.
+语言</p>
+<p>B.
+控制器</p>
+<p>C.
+存储器</p>
+<p>D.
+软件</p>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>D:</strong> 这个题目不展开说了，关于计算机组成的知识，大家看着也就像硬件和软件吧hhhhhh。
+</div>
+
+<p>7 ______是不等长编码。</p>
+<p>A.
+ASCII码</p>
+<p>B.
+Unicode码</p>
+<p>C.
+UTF-8码</p>
+<p>D.
+以上都不</p>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>C:</strong> UTF-8是不等长编码。上面两个是等长。
+</div>
+
+<p>8 <strong><em>_</em></strong>号表示同一行的后面部分是Python程序的注释。</p>
+<p>A.
+*</p>
+<p>B.
+%</p>
+<p>C.
+/</p>
+<p>D.
+#</p>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>D:</strong> C语言,C++是//，Python是#。
+</div>
+
+<p>9 Python语言正确的标识符是<strong><em>_</em></strong>。</p>
+<p>A.
+2you</p>
+<p>B.
+my-name</p>
+<p>C.
+_item</p>
+<p>D.
+abc*234</p>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>C:</strong> 上面说到是大小写字母或者下划线开头，变量中间不能有这个-，只能有数字、字母和下划线，当然也不能有*。
+</div>
+
+<p>10 Python语言的官方网站地址是<strong><em>_</em></strong>。</p>
+<p>A.
+www.python.org</p>
+<p>B.
+www.python.com</p>
+<p>C.
+www.python.edu</p>
+<p>D.
+www.pythontutor.com</p>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>C:</strong> 就是这个.org。网站的域名后缀代表着网站的性质，例如.edu是教育相关等等。这个不重要。
+</div>
+
+<p>11 不是面向对象的程序设计语言是<strong><em>_</em></strong>_。</p>
+<p>A.
+Java</p>
+<p>B.
+C</p>
+<p>C.
+C++</p>
+<p>D.
+Python</p>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>B:</strong> 面向对象语言（Object-Oriented Language）是一类以对象作为基本程序结构单位的程序设计语言，指用于描述的设计是以对象为核心，而对象是程序运行时刻的基本成分。语言中提供了类、对象、封装、继承、多态等成分，有识认性、多态性、类别性和继承性四个主要特点。大家常见的语言中，只有C不是面向对象的，这个记住就好，Python中这个不是重点。
+</div>
+
+<p>12 下面程序的输出是什么？</p>
+<pre><code class="language-python">a,b=5,9
+print(a, b)
+</code></pre>
+<p>A.
+59</p>
+<p>B.
+5,9</p>
+<p>C.
+5□9   (□表示空格)</p>
+<p>D.
+5□□9  (5和9之间二个空格)</p>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  <strong>C:</strong> 需要注意，大家不要认为是因为b前面有空格才是中间隔一个空格的，无论中间有没有空格或者有几个空格，中间都是一个空格。这是因为Python的print()函数会默认输出的多个值之间是一个空格,如果想要调整，可以写成print(a,b,sep='')。sep参数用来调整间隔，你可以自己在单引号中定义分隔符。
+  此外，print()函数默认会空一行，默认是'\n'(即为跳到下一行）。如果你想要调整，可以用print(a,b,end='')来调整输出完之后的空行。
+</div>
+
+<h3 id="_4">填空题</h3>
+<p>1 十进制19.625的二进制是
+00010011.101
+。（整数部分用八位二进制表示） </p>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  转换：整数部分就是16+2+1.小数部分也是一样的,0.5(2^-1)+0.125(2^-3),所以是.101。
+</div>
+
+<p>2 十六进制2AC的八进制表示是
+1254
+。 </p>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  可以先转换为二进制(先转换成十进制就复杂了，因为成次方的进制转换更简单)，2AC是0010 1010 1100，转成八进制就是001 010 101 100就是1254.
+</div>
+
+<p>3 十进制106的原码是
+01101010
+，反码是
+01101010
+，补码是
+01101010
+。 （用八位表示）</p>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  需要注意，二进制整数（正、零、负，需要注意只是整数！）有三种码方式，原码，反码，补码。首先我们需要引入一个符号位，为二进制数的左边第一位，正数是0，负数是1。</br>
+  正数的三种码都是一样的，就是之前讲到的计算方式。负数的原码就是原码除了符号位为1以外，每一位都取反。补码是反码+1。例如，下一题的例子，-78原码是11001110(符号位是1,后面几位就是78的二进制,2^6+2^3+2^2+2^1),反码就是原码除了符号位别的取反,补码就是反码+1(最后一位1+1,写0,往前一位写1,这一步就是和普通的加法一样)。所以如果是有符号的二进制数，8bit可以表示的数字范围是-128到127,-128是10000000,127是01111111.如果是无符号的二进制数，范围就变成了0-255,255是11111111.(可以注意到有符号的二进制数，11111111表示的值是-1)。</br>
+  如果快速从补码转成二进制数，(以8bit为例，其余情况类推）,可以把最高位当成2^-7来计算，如果是0，就是0*2^-7,如果是1，就是1*2^-7。所以10110010就是2^-7+2^5+2^4+2^1=-128+32+16+2=78。二进制数转补码可以先写原码，然后从反码，补码转换，也可以用上述计算规则来逆向得到。
+  </br>可能有同学会问为什么会设计一套这么复杂的体系呢？补码是一项伟大的设计，他使得计算机可以顺利解决减法的问题，同时对溢出也有很好的处理。
+</div>
+
+<p>4 -78的原码是
+11001110
+，反码是
+10110001
+，补码是
+10110010
+。 （用八位表示）</p>
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+  见上一题解释。
+</div>
+
+<h2 id="_5">实验</h2>
+<ul>
+<li>编程题就只放题目名和代码了，大家学习的时候可以对应着pta看一下~ </li>
+</ul>
+<p>7-1 输出“人生苦短，我学Python”</p>
+<pre><code class="language-python">print(&quot;人生苦短，我学Python&quot;)
+</code></pre>
+<p>7-2 写字母H</p>
+<pre><code class="language-python">for i in range(1,6):
+    if i==3:
+        print(&quot;*****&quot;)
+    else:
+        print(&quot;*   *&quot;)
+</code></pre>
+<p>7-3 从键盘输入两个数，求它们的和并输出</p>
+<pre><code class="language-python">a=int(input())
+b=int(input())
+print(a+b)
+</code></pre>
+<p>7-4 从键盘输入三个数到a,b,c中，按公式值输出</p>
+<pre><code class="language-python">a,b,c=map(int,input().split())
+print(b*b-4*a*c)
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "search.highlight", "search.pushstate", "dark-mode-toggle"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
