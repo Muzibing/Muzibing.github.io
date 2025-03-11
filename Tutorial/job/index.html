@@ -447,6 +447,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../leetcodehot100/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    leetcode刷题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -579,6 +600,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      C++
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -599,9 +629,29 @@
 
   <h1>Job</h1>
 
+<p>hwj学长总结：
+1. 用所学的知识类比
+2. 为什么比是什么更重要
+3. 秒杀系统项目
+4. TP link可以作为保底
+5. 2024年金八银九
+6. 实习期间多了解亮点难点，记好笔记
+7. 投递：官网、校招群，CC98，公众号，牛客，boss直聘
+8. 可以找内推人帮忙推内推进度，最后问清目前投递情况，防止人数过多比较难进
+9. 前期技术学习：分布式推荐网站：https://github.com/docs/advanced-java
+10. Java八股推荐网站：https://javaguide.cn/
+11. CS408八股推荐网站：https://xiaolincoding.com/  https://interviewguide.cn/#/ https://github.com/CyC2018/Cs-notes/
+12. leetcode hot 100、代码随想录https://programmercarl.com/ 量化公司：加入残酷刷题群https://github.com/doocs/leetcode
+13. 进阶要求：智力题https://www.nowcoder.com/discuss/353155459769114624  https://www.nowcoder.com/discuss/374239272688254976  技术实战经验：多关注一些互联网厂的技术公众号，多看一些技术文章</p>
 <p>怎么找工作这么难......</p>
 <p>2024.2.10
 今天和Jack讨论中间结果的导出方式（单方面被输出），C++和Python都分别包装好了中间结果的返回值，C++得到了一个结构的指针，里面有很多函数和变量，Python得到了一个list，里面有很多个嵌套的obj（obj是函数名，callable的，可以分别get value，部分需要传参数），Jack认为需要统一格式，比如Python去调用C++的函数，这样以后修改的时候，只需要修改C++的代码。但我觉得不可行，首先函数名都不一样，其次传参的方式也不一样（比如C++有引用传递，也有返回值传递，Python都是返回值传递），如果添加判断的话，还不如直接分开处理。如果在Python中调用C++函数，为了导出中间结果数据，专门编译出.dll文件也很麻烦。Jack又提出直接比较内存块，因为保存方式都是连续存在内存里面的，但我不会这种方式，且这种方式如果发现错误不好比较哪方面是错的。对于Jack质疑的分别处理的方法，我已经统一了导出的格式，依照Python修改了C++的部分，所以格式已经相同。最终勉强维持原方法而结束。</p>
+<p>常见问题：描述一下你的实习经历 描述一下你重构代码的经历 开发过程中遇到的最大困难是什么 </p>
+<p>实习主要工作内容：公司是做图像识别SDK的，各种码识别/文本识别/文本框选各个功能，底层是C++开发的，上层包装成很多种语言(C++ Python C#)等。每次输入图片以后，调用很多函数处理，会产生很多中间结果，比如图片文本加强，图片类型改变等。
+我主要负责写代码对中间结果导出，还有验证正确性。比如某张图片和标准集进行对比，写一些验证函数去验证开发封装好的方法。导出以后，因为有很多个语言封装，需要去验证不同封装下，导出相同图片的结果是相同的。
+还有就是测试不同版本的代码的性能差异，效果差异，反馈结果。原有一些测试代码，但测试的是老版本的，对这部分代码更新。
+还有自动生成一些数据集，用于训练图像识别模型。</p>
+<p>遇到的困难：写一个函数调用封装好的二维码识别函数，对图集进行识别，把结果存进文件夹里面。是Python代码，调用C++封装好的函数，使用了共享内存(shared_memory)机制，（一开始是共享内存的名字不一致，导致无法进入共享内存，发现：打断点，Python跑一半，直接调exe文件(subprocess.run(xx.exe,参数)，还是运行不了）然后发现共享内存的名字不一致。最后发现是开了多线程调用C++函数，同时对共享内存进行读写（把线程数调成1 发现结果正确）最后给多线程加了个锁 lock = threading.Lock() with lock: 来解决问题</p>
 <h2 id="_1">智力题</h2>
 <p>https://www.nowcoder.com/discuss/374239272688254976</p>
 <p>https://www.nowcoder.com/discuss/353155459769114624</p>
@@ -610,6 +660,13 @@
 https://blog.csdn.net/weixin_51486343/article/details/113351092</p>
 <p>ACID
 https://blog.csdn.net/qq_39390545/article/details/116452271</p>
+<p>SQL性能优化
+https://zhuanlan.zhihu.com/p/24326786152</p>
+<p>乐观锁和悲观锁 数据库实现
+https://www.cnblogs.com/kyoner/p/11318979.html</p>
+<h2 id="c">C++</h2>
+<p>八股
+https://blog.csdn.net/songbijian/article/details/132507421</p>
 
 
 

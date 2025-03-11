@@ -10,9 +10,13 @@
         <meta name="author" content="Cai Jiawei">
       
       
-        <link rel="canonical" href="http://Muzibing.github.io/Tutorial/Java/">
+        <link rel="canonical" href="http://Muzibing.github.io/Tutorial/leetcodehot100/">
       
       
+        <link rel="prev" href="../website/">
+      
+      
+        <link rel="next" href="../about/">
       
       
       <link rel="icon" href="../../img/qhqq.jpg">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Java - MuZibing(Cai Jiawei)'s website</title>
+        <title>leetcode刷题 - MuZibing(Cai Jiawei)'s website</title>
       
     
     
@@ -73,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Java
+              leetcode刷题
             
           </span>
         </div>
@@ -263,17 +272,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -287,7 +298,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             自制的一点点教程
@@ -442,6 +453,94 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    leetcode刷题
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    leetcode刷题
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      两数之和-1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-49" class="md-nav__link">
+    <span class="md-ellipsis">
+      字母异位词分组-49
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-128" class="md-nav__link">
+    <span class="md-ellipsis">
+      最长连续序列-128
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -549,6 +648,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      两数之和-1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-49" class="md-nav__link">
+    <span class="md-ellipsis">
+      字母异位词分组-49
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-128" class="md-nav__link">
+    <span class="md-ellipsis">
+      最长连续序列-128
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -566,9 +702,323 @@
   
 
 
-  <h1>Java</h1>
-
-
+<h1 id="_1">哈希</h1>
+<h3 id="-1">两数之和-1</h3>
+<ul>
+<li>
+<p>暴力双循环 n^2复杂度</p>
+</li>
+<li>
+<p>哈希表 记录nums[i]和i </p>
+</li>
+</ul>
+<p>(C++: unordered_map&lt;int, int&gt; mp</p>
+<p>mp[nums[i]]=i 插入</p>
+<p>auto it=mp.find(target-nums[i]);</p>
+<p>if(it!=mp.end()) 找到</p>
+<p>return {it-&gt;second,i}; 返回格式是[x,y])</p>
+<p>这题注意先查hash表再放入 防止自己和自己匹配</p>
+<h3 id="-49">字母异位词分组-49</h3>
+<h3 id="-128">最长连续序列-128</h3>
+<h1 id="_2">双指针</h1>
+<h3 id="-283">移动零-283</h3>
+<p>双指针遍历 一开始left=right=0 while(right &lt; size) 如果nums[right]是0 right右移 不然就交换 left++ right++</p>
+<h3 id="-11">盛最多水的容器-11</h3>
+<p>左右两个指针放最边上 然后往中间移动 移矮的那个（因为移高的不可能有收益）</p>
+<h3 id="-15">三数之和-15</h3>
+<p>先排序 第一个数从头遍历 二、三个数用双指针在后面找 注意第一个数需要去重</p>
+<h3 id="-42">接雨水-42</h3>
+<ul>
+<li>
+<p>从左往右遍历 记录每个柱子左边最高的柱子 从右往左遍历 记录每个柱子右边最高的柱子 然后竖向来看 能存的就是min(左max,右max)-当前高度</p>
+</li>
+<li>
+<p>单调栈方法</p>
+</li>
+</ul>
+<h1 id="_3">滑动窗口</h1>
+<h3 id="-3">无重复字符的最长子串-3</h3>
+<h3 id="-438">找到字符串中所有字母异位词-438</h3>
+<h1 id="_4">子串</h1>
+<h3 id="k-560">和为k的子数组-560</h3>
+<h3 id="-239">滑动窗口最大值-239</h3>
+<ul>
+<li>一个优先队列存所有数和下标，遍历i同时i往后移动，取当前优先队列最大值，如果下标不在窗口范围内，移出，再取直到在范围内。</li>
+</ul>
+<p>（C++: priority_queue&lt;pair<int, int\>> q</p>
+<p>q.emplace(nums[i], i) 加入元素 q.top().first q.top().second 取元素 q.pop() 出队列 )</p>
+<ul>
+<li>一个双向队列 里面的下标递增 数字大小递减（因为如果下标增，数字也增，小的下标不可能被用到，所以可以出队列） 遍历i同时i往后移动，取当前队列最大值，如果下标不在窗口范围内，移出，再取直到在范围内。 </li>
+</ul>
+<p>deque&lt;int&gt; q;</p>
+<p>q.pop_back() q.push_back() q.pop_front()</p>
+<h3 id="-76">最小覆盖子串-76</h3>
+<h1 id="_5">普通数组</h1>
+<h3 id="-53">最大子数组和-53</h3>
+<h3 id="-">合并区间-</h3>
+<p>按照first元素对intervals排序 注意lambda表达式写法</p>
+<pre><code>sort(intervals.begin(),intervals.end(),[](vector&lt;int&gt; &amp;a,vector&lt;int&gt; &amp;b){
+            return a[0]&lt;b[0];
+        });
+</code></pre>
+<p>判断待加入的左端点和当前右端点的大小，如果待加入左端点大，那就分开；如果当前右端点大，就合并与更新右端点</p>
+<h3 id="-189">轮转数组-189</h3>
+<h3 id="-238">除自身以外数组的乘积-238</h3>
+<h3 id="-41">缺失的第一个正数-41</h3>
+<h1 id="_6">矩阵</h1>
+<h3 id="-73">矩阵置零-73</h3>
+<h3 id="-54">螺旋矩阵-54</h3>
+<h3 id="-48">旋转图像-48</h3>
+<h3 id="ii-240">搜索二维矩阵II-240</h3>
+<h1 id="_7">链表</h1>
+<h3 id="-160">相交链表-160</h3>
+<h3 id="-206">反转链表-206</h3>
+<p>当前元素是cur 上一个元素是pre while(cur!=nullptr) 记录tmp是下一个 cur-&gt;next=pre pre=cur cur=tmp 最后return的是pre 因为最后一步之后 cur已经是最后一个的next了 pre才是最后一个</p>
+<p>递归也是一样的思路 返回值是ListNode*类型</p>
+<h3 id="-234">回文链表-234</h3>
+<h3 id="-141">环形链表-141</h3>
+<h3 id="ii-142">环形链表II-142</h3>
+<h3 id="-21">合并两个有序链表-21</h3>
+<h3 id="-2">两数相加-2</h3>
+<h3 id="n-19">删除链表的倒数第N个节点-19</h3>
+<h3 id="-24">两两交换链表中的节点-24</h3>
+<h3 id="k-25">K个一组翻转链表-25</h3>
+<h3 id="-138">随机链表的复制-138</h3>
+<h3 id="-148">排序链表-148</h3>
+<h3 id="k-23">合并K个升序链表-23</h3>
+<h3 id="lru-146">LRU缓存-146</h3>
+<h1 id="_8">二叉树</h1>
+<h3 id="-94">二叉树的中序遍历-94</h3>
+<p>递归 注意返回条件 函数开始写个如果nullptr就返回 后面就不用判断是否为null了 直接遍历</p>
+<p>迭代 用栈</p>
+<h3 id="-104">二叉树的最大深度-104</h3>
+<pre><code>int maxDepth(TreeNode* root) {
+    if(root==nullptr)return 0;
+    return max(maxDepth(root-&gt;left),maxDepth(root-&gt;right))+1;
+}
+</code></pre>
+<h3 id="-226">翻转二叉树-226</h3>
+<pre><code>TreeNode* swap(TreeNode *root)
+{
+    if(root!=nullptr)
+    {
+        TreeNode* temp;
+        temp=root-&gt;left;
+        root-&gt;left=root-&gt;right;
+        root-&gt;right=temp;
+        swap(root-&gt;left);
+        swap(root-&gt;right);
+    }
+    return root;
+}
+TreeNode* invertTree(TreeNode* root) {
+    swap(root);
+    return root;
+}
+</code></pre>
+<h3 id="-101">对称二叉树-101</h3>
+<pre><code>bool Judge(TreeNode* root1,TreeNode* root2)
+{
+    if(root1==nullptr&amp;&amp;root2==nullptr)return true;
+    if(root1==nullptr||root2==nullptr)return false;
+    if(root1-&gt;val!=root2-&gt;val)return false;
+    return Judge(root1-&gt;left,root2-&gt;right)&amp;&amp;Judge(root1-&gt;right,root2-&gt;left);
+}
+bool isSymmetric(TreeNode* root) {
+    if(root==nullptr)return true;
+    return Judge(root-&gt;left,root-&gt;right);
+}
+</code></pre>
+<h3 id="-543">二叉树的直径-543</h3>
+<h3 id="-102">二叉树的层序遍历-102</h3>
+<h3 id="-108">将有序数组转换为二叉搜索树-108</h3>
+<h3 id="-98">验证二叉搜索树-98</h3>
+<h3 id="k-230">二叉搜索树种第K小的元素-230</h3>
+<h3 id="-199">二叉树的右视图-199</h3>
+<h3 id="-114">二叉树展开为链表-114</h3>
+<h3 id="-105">从前序与中序遍历序列构造二叉树-105</h3>
+<h3 id="iii-437">路径综合III-437</h3>
+<h3 id="-236">二叉树的最近公共祖先-236</h3>
+<h3 id="-124">二叉树中的最大路径和-124</h3>
+<h1 id="_9">图论</h1>
+<h3 id="-200">岛屿数量-200</h3>
+<p>dfs遍历 记得标记已经遍历过的格子</p>
+<h3 id="-994">腐烂的橘子-994</h3>
+<p>bfs遍历 用一个队列存当前腐烂的和时间</p>
+<p>while(!Q.empty()) 要记录还有没有新鲜橘子 没有就直接break</p>
+<p>二维数组也可以memset(dis, -1, sizeof(dis))</p>
+<h3 id="-207">课程表-207</h3>
+<p>拓扑排序 不存在环就ok </p>
+<p>可以用unordered_map&lt;int, vector\int&gt;&gt;存邻接表 用vector&lt;int&gt;存入度 </p>
+<p>bfs更好理解 用一个队列存可以的节点 慢慢出 时间复杂度O(n+m) (时间复杂度深搜广搜都一样)</p>
+<h3 id="trie-208">实现Trie（前缀树）-208</h3>
+<h1 id="_10">回溯</h1>
+<h3 id="-46">全排列-46</h3>
+<h3 id="-78">子集-78</h3>
+<h3 id="-17">电话号码的字母组合-17</h3>
+<h3 id="-39">组合总和-39</h3>
+<h3 id="-22">括号生成-22</h3>
+<h3 id="-79">单词搜索-79</h3>
+<h3 id="-131">分割回文串-131</h3>
+<h3 id="n-51">N皇后-51</h3>
+<h1 id="_11">二分查找</h1>
+<h3 id="-35">搜索插入位置-35</h3>
+<h3 id="-74">搜索二维矩阵-74</h3>
+<h3 id="-34">在排序数组中查找元素的第一个和最后一个位置-34</h3>
+<h3 id="-33">搜索旋转排序数组-33</h3>
+<h3 id="-153">寻找旋转排序数组中的最小值-153</h3>
+<h3 id="_12">寻找两个正序数组的中位数</h3>
+<h1 id="_13">栈</h1>
+<h3 id="-20">有效的括号-20</h3>
+<p>如果是([{就入栈 是)]}就出一个比较（注意栈非空 否则直接返回false） 注意最后栈要是空的</p>
+<h3 id="-155">最小栈-155</h3>
+<p>关键是栈的性质 每个元素入栈时记录当前元素入栈后 栈内元素的最小值 求最小值的时候直接就可以拿出来 Keep.push_back(min(val,Keep[Keep.size()-1]))</p>
+<p>如果不使用额外空间，在栈中保存当前值和最小值的差 注意如果当前元素是最小值 push的差值不要是0 而是那个负数 不然这个元素出栈以后 之前的信息恢复不了</p>
+<p>元素出栈的时候 如果栈元素小于0 说明当前值是最小值 恢复最小值 如果栈元素大于0 直接出栈 </p>
+<p>注意需要开long long</p>
+<h3 id="-394">字符串解码-394</h3>
+<h3 id="-739">每日温度-739</h3>
+<p>单调栈做法：在O(n)时间复杂度下求数组中各元素右侧第一个更大的元素和其下标</p>
+<p>性质：单调栈存储的下标中 对应的温度列表中的温度依次递减 </p>
+<p>遍历下标 如果栈空：入栈 如果栈非空：栈顶温度大于当前温度：入栈 栈顶温度小于当前温度：栈顶元素出栈 栈顶元素的下一个高温就是当前元素 然后继续看下一个栈顶元素 </p>
+<p>元素遍历完以后 如果栈中还有下标 那就是找不到下一个高温</p>
+<h3 id="-84">柱状图中最大的矩形-84</h3>
+<h1 id="_14">堆</h1>
+<h3 id="k-215">数组中的第K个最大元素-215</h3>
+<h3 id="k-347">前K个高频元素-347</h3>
+<h3 id="-295">数据流的中位数-295</h3>
+<h1 id="_15">贪心算法</h1>
+<h3 id="-121">买卖股票的最佳时机-121</h3>
+<p>遍历数组 在每一天考虑：如果我是在历史最低点买入的 那我当前卖出能赚多少 然后max(以前，当天) 所以遍历的同时用一个变量记录历史最低点</p>
+<h3 id="-55">跳跃游戏-55</h3>
+<p>遍历数组每一个下标 更新能到达的最远距离 如果遍历过程中 有i&gt;最远距离 说明到不了 false 否则就是true</p>
+<h3 id="ii-45">跳跃游戏II-45</h3>
+<ul>
+<li>
+<p>反向查找 从最后一个位置开始 选能到的最远的位置 O(n^2)复杂度</p>
+</li>
+<li>
+<p>正向查找 维护当前能够到达的最大位置 如果到达该最大位置</p>
+</li>
+</ul>
+<p>例如 一开始只能到0 维护0能到的最远位置 为2 然后要走一步了 步数+1 最远位置为2 然后看1 2能到的最远位置 1能到4 然后要走一步了 步数+1 发现到4了 结束</p>
+<p>这个过程一开始设置end=0 遍历i 从0到n-1 maxpos=max(maxpos,i+nums[i]) if(i==end) end=maxpos 更新最远位置 ans++ </p>
+<h3 id="-763">划分字母区间-763</h3>
+<p>用一个表格记录每个字母最远位置的元素</p>
+<p>从头开始遍历 并用新字母的最远位置和原有的最远位置取个max 如果遍历到最远元素 就ok了 记录当前的长度 然后继续遍历直到结束</p>
+<h1 id="_16">动态规划</h1>
+<h3 id="-70">爬楼梯-70</h3>
+<p>初始化dp[0]=dp[1]=1 dp[n]=dp[n-1]+dp[n-2] (或者不管0 直接初始化1和2 这样更有道理一点)</p>
+<h3 id="-118">杨辉三角-118</h3>
+<p>dp[i][j]=dp[i-1][j-1]+dp[i-1][j]</p>
+<h3 id="-198">打家劫舍-198</h3>
+<p>dp[i]=max(dp[i-1],dp[i-2]+nums[i])</p>
+<h3 id="-279">完全平方数-279</h3>
+<pre><code>for(int j=1;j*j&lt;i;j++)
+{
+    minn=min(minn,dp[i-j*j]+1);
+}
+</code></pre>
+<h3 id="-322">零钱兑换-322</h3>
+<p>完全背包：每个元素无限多</p>
+<p>i 金额(体积) j 硬币(物品)</p>
+<p>一开始可以把dp数组都设成amount+1（因为最多就是amount个硬币，最后可以通过判断dp[amount]是否是amount+1判断是否有解）</p>
+<p>外层枚举体积 内层枚举硬币 反过来也可以 但这样比较好理解</p>
+<pre><code>dp[0]=0 
+for(int i=1;i&lt;=amount;i++)
+{
+    for(int j=0;j&lt;coins.size();j++)
+    {
+        if(i-coins[j]&gt;=0)
+        dp[i]=min(dp[i],dp[i-coins[j]]+1);
+    }
+}
+</code></pre>
+<p>关于时间复杂度 外层循环枚举物品的写法，只会遍历物品数组一次；而内层循环枚举物品的写法，会遍历物品数组多次。从 cache 的角度分析，多次遍历数组会导致额外的 cache miss，带来额外的开销。所以虽然这两种写法的时间空间复杂度是一样的，但外层循环枚举物品的写法常数更小。（来自0x3f)</p>
+<h3 id="-139">单词拆分-139</h3>
+<p>把所有单词都存入一个unordered_set 字符串从短开始遍历</p>
+<pre><code>dp[0]=true;
+for(int i=1;i&lt;=s.size();i++)
+{
+    for(int j=0;j&lt;i;j++)
+    {
+        if(dp[j]&amp;&amp;sett.find(s.substr(j,i-j))!=sett.end())
+        {
+            dp[i]=true;
+            break;
+        }
+    }
+}
+</code></pre>
+<h2 id="-300">最长递增子序列-300</h2>
+<p>dp[i]表示以s[i]结尾的最长递增子序列的长度（注意要s[i]结尾）</p>
+<p>这样递推公式就很自然：每个i 遍历之前的j 如果s[j]&lt;s[i] 那么dp[i]=max(dp[i],dp[j]+1)</p>
+<pre><code>int maxx=0;
+for(int i=0;i&lt;n;i++)
+{
+    dp[i]=1;
+    for(int j=0;j&lt;i;j++)
+    {
+        if(nums[i]&gt;nums[j])
+        {
+            dp[i]=max(dp[i],dp[j]+1);
+        }
+    }
+    maxx=max(maxx,dp[i]);
+}
+</code></pre>
+<h3 id="-152">乘积最大子数组-152</h3>
+<p>两个变量存到当前的最大乘积和到当前的最小乘积（包括当前的） 一个变量存整体的最大（不需要包含当前）</p>
+<p>遍历数组 如果当前是正数 就更新当前的最大乘积maxx=max(nums[i],maxx<em>nums[i]) 最小乘积minn=min(nums[i],minn</em>nums[i]); 如果当前是负数 可以先把最大和最小换个位置 然后更新最大乘积和最小乘积 注意更新完之后都要更新整体的最大</p>
+<h3 id="-416">分割等和子集-416</h3>
+<p>01背包问题 选or不选一个 最后总量是总和/2</p>
+<p>可以把dp数组设成bool i表示数字 j表示和 dp[i][j]表示前i个数能否组成和为j 也可以把数组设成int 每个东西重量和价值都是nums[i] 最后判断dp[n-1][target]是否等于target</p>
+<p>需要注意初始化</p>
+<pre><code>vector&lt;vector&lt;int&gt;&gt; dp(n,vector&lt;int&gt;(target+1)); 
+for(int j=0;j&lt;=target;j++)
+{
+    dp[0][j]=0;
+}
+for(int i=1;i&lt;n;i++)
+{
+    dp[i][0]=0;
+    for(int j=1;j&lt;=target;j++)
+    {
+        if(j-nums[i]&gt;=0)
+        dp[i][j]=max(dp[i-1][j],dp[i-1][j-nums[i]]+nums[i]);
+        else dp[i][j]=dp[i-1][j];
+    }
+}
+return dp[n-1][target]==target;
+</code></pre>
+<pre><code>int target=summ/2;
+vector&lt;vector&lt;bool&gt;&gt; dp(n,vector&lt;bool&gt;(target+1,false)); 
+dp[0][0]=true;
+for(int i=1;i&lt;n;i++)
+{
+    dp[i][0]=true;
+    for(int j=1;j&lt;=target;j++)
+    {
+        if(j-nums[i]&gt;=0)
+        dp[i][j]=dp[i-1][j]|dp[i-1][j-nums[i]];
+        else dp[i][j]=dp[i-1][j];
+    }
+}
+return dp[n-1][target];
+</code></pre>
+<h3 id="-32">最长有效括号-32</h3>
+<h1 id="_17">多维动态规划</h1>
+<h3 id="-62">不同路径-62</h3>
+<h3 id="-64">最小路径和-64</h3>
+<h3 id="-5">最长回文子串-5</h3>
+<h3 id="-1143">最长公共子序列-1143</h3>
+<h3 id="-72">编辑距离-72</h3>
+<h1 id="_18">技巧</h1>
+<h3 id="-136">只出现一次的数字-136</h3>
+<h3 id="-169">多数元素-169</h3>
+<h3 id="-75">颜色分类-75</h3>
+<h3 id="-31">下一个排列-31</h3>
+<h3 id="-287">寻找重复数-287</h3>
 
 
 
