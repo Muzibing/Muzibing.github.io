@@ -597,6 +597,72 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      二叉树
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二叉树">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-297" class="md-nav__link">
+    <span class="md-ellipsis">
+      二叉树的序列化和反序列化-297
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atoi-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串转换整数(atoi)-8
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-442" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组中重复的数据-442
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-43" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串相乘-43
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -795,6 +861,72 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      二叉树
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二叉树">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-297" class="md-nav__link">
+    <span class="md-ellipsis">
+      二叉树的序列化和反序列化-297
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atoi-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串转换整数(atoi)-8
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-442" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组中重复的数据-442
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-43" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串相乘-43
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -885,6 +1017,86 @@ vector&lt;vector&lt;int&gt;&gt; combine(int n, int k) {
     Back(1,n,k,help);
     return keep;
 }
+</code></pre>
+<h2 id="_3">二叉树</h2>
+<h3 id="-297">二叉树的序列化和反序列化-297</h3>
+<p>近似于层序遍历 需要给null留位置 把字符串转成树的时候也是 还有通过stringstream把string转成vector</p>
+<h2 id="_4">其他</h2>
+<h3 id="atoi-8">字符串转换整数(atoi)-8</h3>
+<p>注意溢出判断，前面消去前导0和判断符号</p>
+<h3 id="-442">数组中重复的数据-442</h3>
+<ul>
+<li>原地hash
+尝试将每个元素放到对应的位置</li>
+</ul>
+<pre><code>vector&lt;int&gt; ans;
+int n=nums.size();
+for(int i=0;i&lt;n;i++)
+{
+    while(nums[i]!=nums[nums[i]-1])
+    {
+        swap(nums[i],nums[nums[i]-1]);
+    }
+}
+for(int i=0;i&lt;n;i++)
+{
+    if(nums[i]-1!=i)
+    {
+        ans.push_back(nums[i]);
+    }
+}
+return ans;
+</code></pre>
+<ul>
+<li>使用正负号作标记</li>
+</ul>
+<p>遍历过程中，取出当前数字，取绝对值 去下标-1找 如果是负数 说明已出现过 如果是正数 则将下标-1的数据调成负数</p>
+<pre><code>vector&lt;int&gt; ans;
+int n=nums.size();
+for(int i=0;i&lt;n;i++)
+{
+    int x=abs(nums[i]);
+    if(nums[x-1]&gt;0)
+    {
+        nums[x-1]=-nums[x-1];
+    }
+    else{
+        ans.push_back(x);
+    }
+}
+return ans;
+</code></pre>
+<h3 id="-43">字符串相乘-43</h3>
+<ul>
+<li>可以用数组来存储每一个对应位上的乘积 最后统一处理进位 注意这个题要处理前导0和乘积为0的情况</li>
+</ul>
+<pre><code>int n=num1.size();
+int m=num2.size();
+vector&lt;int&gt; v(n+m);
+for(int i=0;i&lt;n;i++)
+{
+    for(int j=0;j&lt;m;j++)
+    {
+        int a=num1[n-i-1]-'0';
+        int b=num2[m-j-1]-'0';
+        v[n+m-1-(i+j)]+=a*b;
+    }
+}
+int carry=0;
+for(int i=n+m-1;i&gt;=0;i--)
+{
+    v[i]+=carry;
+    carry=v[i]/10;
+    v[i]=v[i]%10;
+}
+string s=&quot;&quot;;
+for(int i=0;i&lt;n+m;i++)
+{
+    if(s.empty()&amp;&amp;v[i]==0)continue;
+    s+=v[i]+'0';
+}
+if(s==&quot;&quot;)s=&quot;0&quot;;
+return s;
 </code></pre>
 
 
