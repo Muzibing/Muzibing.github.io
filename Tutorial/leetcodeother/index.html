@@ -525,6 +525,48 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
+      手搓快排
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      手搓堆排
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      链表
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="链表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ii-92" class="md-nav__link">
+    <span class="md-ellipsis">
+      反转链表II-92
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
       动态规划
     </span>
   </a>
@@ -574,7 +616,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       回溯
     </span>
@@ -598,7 +640,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       二叉树
     </span>
@@ -622,7 +664,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       其他
     </span>
@@ -789,6 +831,48 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
+      手搓快排
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      手搓堆排
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      链表
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="链表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ii-92" class="md-nav__link">
+    <span class="md-ellipsis">
+      反转链表II-92
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
       动态规划
     </span>
   </a>
@@ -838,7 +922,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       回溯
     </span>
@@ -862,7 +946,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       二叉树
     </span>
@@ -886,7 +970,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       其他
     </span>
@@ -947,7 +1031,72 @@
 
   <h1>leetcode 其他</h1>
 
-<h2 id="_1">动态规划</h2>
+<h2 id="_1">手搓快排</h2>
+<pre><code>int Partition(vector&lt;int&gt; &amp;a,int l,int r)
+{
+    int pivot = a[r];
+    int i=l;
+    for(int j=l;j&lt;r;j++) // 把所有比基准值小的数全部往前扔
+    {
+        if(a[j]&lt;pivot)
+        {
+            swap(a[i],a[j]);
+            i++;
+        }
+    }
+    swap(a[i],a[r]); // 把基准值换到对应的位置
+    return i;
+}
+
+void QuickSort(vector&lt;int&gt; &amp;a,int l,int r)
+{
+    if(l&gt;=r)return;
+    int index=Partition(a,l,r);
+    cout&lt;&lt;&quot;index=&quot;&lt;&lt;index&lt;&lt;endl;
+    QuickSort(a,l,index-1);
+    QuickSort(a,index+1,r);
+}
+</code></pre>
+<h2 id="_2">手搓堆排</h2>
+<p>先写堆移动和建堆函数 注意堆移动是从堆顶往下递归 因为上下两个元素互换 下面这个元素可能不满足堆的特性 上面这个元素肯定是满足的</p>
+<pre><code>void heapify(vector&lt;int&gt; &amp;a,int n,int i)
+{
+    int largest=i;
+    int l=2*i+1;
+    int r=2*i+2;
+    if(l&lt;n &amp;&amp; a[l]&gt;a[largest])
+        largest=l;
+    if(r&lt;n &amp;&amp; a[r]&gt;a[largest])
+        largest=r;
+    if(largest!=i)
+    {
+        swap(a[i],a[largest]);
+        heapify(a,n,largest);
+    }
+}
+
+void buildHeap(vector&lt;int&gt; &amp;a)
+{
+    for(int i=(a.size()-1)/2;i&gt;=0;i--)
+    {
+        heapify(a,a.size()-1,i);
+    }
+}
+
+void heapSort(vector&lt;int&gt; &amp;a)
+{
+    buildHeap(a);
+    for(int i=a.size()-1;i&gt;0;i--)
+    {
+        swap(a[0],a[i]);
+        heapify(a,i,0);
+    }
+}
+</code></pre>
+<h2 id="_3">链表</h2>
+<h3 id="ii-92">反转链表II-92</h3>
+<p>k个一组反转链表的简单版 注意找到head和tail（反转对象的前一个和后一个） 然后反转的时候记得最后要连head和新链表的第一个 （pre一开始=tail就连上了新链表的最后一个和tail）</p>
+<h2 id="_4">动态规划</h2>
 <h3 id="ii-122">买卖股票的最佳时机II-122</h3>
 <ul>
 <li>dp做法 保留有股票状态和没股票状态（dp[i][0]和dp[i][1]）</li>
@@ -993,7 +1142,7 @@ return dp[0][n-1];
 <ul>
 <li>或者求原字符串和翻转后的字符串的最长公共子序列 还真就是这么回事</li>
 </ul>
-<h2 id="_2">回溯</h2>
+<h2 id="_5">回溯</h2>
 <h3 id="-77">组合-77</h3>
 <p>放进help 然后进Back 拿出来 再进Back 就实现了放当前和不放当前</p>
 <pre><code>vector&lt;vector&lt;int&gt;&gt; keep;
@@ -1018,10 +1167,10 @@ vector&lt;vector&lt;int&gt;&gt; combine(int n, int k) {
     return keep;
 }
 </code></pre>
-<h2 id="_3">二叉树</h2>
+<h2 id="_6">二叉树</h2>
 <h3 id="-297">二叉树的序列化和反序列化-297</h3>
 <p>近似于层序遍历 需要给null留位置 把字符串转成树的时候也是 还有通过stringstream把string转成vector</p>
-<h2 id="_4">其他</h2>
+<h2 id="_7">其他</h2>
 <h3 id="atoi-8">字符串转换整数(atoi)-8</h3>
 <p>注意溢出判断，前面消去前导0和判断符号</p>
 <h3 id="-442">数组中重复的数据-442</h3>
