@@ -658,6 +658,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#git_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他常用git指令
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -667,6 +676,15 @@
   <a href="#tips" class="md-nav__link">
     <span class="md-ellipsis">
       小tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      ssh 上传
     </span>
   </a>
   
@@ -776,6 +794,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#git_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他常用git指令
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -785,6 +812,15 @@
   <a href="#tips" class="md-nav__link">
     <span class="md-ellipsis">
       小tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      ssh 上传
     </span>
   </a>
   
@@ -847,8 +883,38 @@
 如原来本地初始化时默认分支为master, 
 现在我想让他改为和远程仓库一致变成main</p>
 <p><code>git branch -m master main</code></p>
+<h3 id="git_1">其他常用git指令</h3>
+<p><code>git pull</code></p>
+<p>拉取最新改动 = git fetch + git merge</p>
+<p><code>git fetch</code></p>
+<p>下载远程最新改动</p>
+<p><code>git branch</code></p>
+<p>查看当前分支</p>
+<p><code>git checkout xx</code> </p>
+<p>切换到xx分支</p>
+<p><code>git checkout -b xx</code></p>
+<p>新建xx分支并切换到该分支 --当你想基于当前本地分支的代码状态创建一个新分支时使用（比如从 main 分支切出一个新功能分支）</p>
+<p><code>git branch -u origin/xx</code></p>
+<p>已经创建后为后续指定当前分支的远程分支</p>
+<p><code>git checkout -b xx origin/xx</code></p>
+<p>从远程分支创建并切换本地分支 --当远程仓库已存在某个分支（如 origin/dev），你想在本地创建一个对应的分支进行开发时使用（-b=新建）</p>
+<p><code>git branch -d xx</code></p>
+<p>删除已合并的xx分支</p>
+<p><code>git pull --rebase origin main</code></p>
+<p>拉取远程分支并合并到当前分支 --当本地分支已存在时使用 变基操作</p>
 <h2 id="tips">小tips</h2>
 <p>如果是上传文件，也可以直接上github手动选择文件夹上传，还挺方便的，代码小幅度的修改也可以。因为在本地git很容易连不上服务器。</p>
+<h2 id="ssh">ssh 上传</h2>
+<p>主要用于github抽风连不上服务器的时候 稳定push or clone到仓库</p>
+<p>可以这样配置本机的ssh：</p>
+<p>检查本地主机是否存在ssh key： 在任意目录下<code>cd ~/.ssh</code> <code>ls</code>查看是否存在id_rsa和id_rsa.pub，如果存在，说明已经有SSH Key</p>
+<p>如果不存在，则需要生成SSH Key：<code>ssh-keygen -t rsa -C "你的邮箱@balabala.com"</code> 一直按回车即可 注意是注册github的邮箱</p>
+<p>通过<code>cat id_rsa.pub</code>查看生成的SSH Key 复制该内容（注意前缀ssh-rsa也要复制）</p>
+<p>进入github settings设置 SSH and GPG keys把刚刚复制的内容粘贴上去保存</p>
+<p>使用<code>ssh -T git@github.com</code>测试是否连接成功 显示Hi  you've successfully authenticated, but GitHub does not provide shell access.即为成功</p>
+<p>然后在要上传的目录下使用 <code>git remote -v</code> 如果显示的是https地址 需要改成ssh </p>
+<p>使用<code>git remote set-url origin git@github.com:仓库所有者id/仓库名.git</code></p>
+<p>然后采用相同的办法push即可</p>
 <h2 id="github_2">github上还有很多学长学姐们的课程资料经验仓库，可以多多寻找~</h2>
 
 

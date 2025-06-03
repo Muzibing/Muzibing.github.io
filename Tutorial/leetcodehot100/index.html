@@ -1046,7 +1046,7 @@
           <li class="md-nav__item">
   <a href="#iii-437" class="md-nav__link">
     <span class="md-ellipsis">
-      路径综合III-437
+      路径总和III-437
     </span>
   </a>
   
@@ -1969,7 +1969,7 @@
           <li class="md-nav__item">
   <a href="#iii-437" class="md-nav__link">
     <span class="md-ellipsis">
-      路径综合III-437
+      路径总和III-437
     </span>
   </a>
   
@@ -2888,8 +2888,8 @@ TreeNode* buildTree(vector&lt;int&gt;&amp; preorder, vector&lt;int&gt;&amp; inor
     return dfs(preorder,inorder,0,preorder.size(),0,inorder.size());
 }
 </code></pre>
-<h3 id="iii-437">路径综合III-437</h3>
-<p>维护一个前缀和的map 注意map要随着遍历去更新 dfs搜下去 这个点搜完了 就把这个点的前缀和从map中-1 </p>
+<h3 id="iii-437">路径总和III-437</h3>
+<p>维护一个前缀和的map 注意map要随着遍历去更新 dfs搜下去 这个点搜完了 就把这个点的前缀和从map中-1 注意初始化：前缀和为0有1条路径（就是啥都不取）</p>
 <pre><code>unordered_map&lt;long long,int&gt; prefix;
 int ret=0;
 void dfs(TreeNode *root,long long cur,int targetSum)
