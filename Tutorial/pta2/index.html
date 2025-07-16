@@ -781,7 +781,7 @@
  n=int(input())  <br />
  print(sum([int('a'*i) for i in range(1,n+1)]))</p>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>错误:</strong> 
+  <strong>错误:</strong> 错点在于'a'是字符串而不是数字，比如'a'*3得到的是'aaa'，不能转成数字。修改的话可以改成int(a*i)或者int(str(a)*i)——str(a)得到的是'6'而不是'a'。
 </div>
 
 <p>2 下面程序的运行结果是4。</p>
@@ -789,7 +789,7 @@
 ++i
 </code></pre>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>错误:</strong> 
+  <strong>错误:</strong> 在C等语言中，存在自增运算符++。但Python中不存在自增运算符。可以用i+=1或者i=i+1
 </div>
 
 <p>3 当输入是：45,8 时，下面程序的输出结果是37。  </p>
@@ -799,7 +799,7 @@ c=int('a',b)
 print(c)
 </code></pre>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>错误:</strong> 
+  <strong>错误:</strong> 相同的问题，int('a',b)使用的是字符串'a'而不是数字45,换成int(a,b)
 </div>
 
 <p>4 当输入是10.0时，下面程序的输出是f(10.0) = 0.1。  </p>
@@ -811,13 +811,13 @@ else:
 print('f({0:.1f}) = {1:.1f}'.format(x,result))
  
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>错误:</strong> 
+  <strong>错误:</strong> int类型不能输入浮点数，会导致ValueError。可以使用float(input())
 </div>
 </p>
 <p>5 表达式 -2**4 等于16。<br />
  
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>错误:</strong> 
+  <strong>错误:</strong> 负的（2的4次方）是-16，前面打括号才是16，和数学上是一样的。
 </div>
 </p>
 <p>6 下面程序的输入是5，输出是：</p>
@@ -828,65 +828,65 @@ print('{:^5}'.format('<em>'</em>m))
 print('{:^m}'.format('<em>'</em>m))
  
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>错误:</strong> 
+  <strong>错误:</strong> 第一行结果是正确的，问题在第二行。format语法中，'{:^m}'不会从外部变量中查找m，可以修改成print('{:^{}}'.format('*' * m, m))。
 </div>
 </p>
 <p>7 下面程序的输出是：这是字符串输出格式□□123。 □表示空格。  </p>
 <p>print("这是字符串输出格式{:5s}".format("123"))
  
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>错误:</strong> 
+  <strong>错误:</strong> :5s是指输出字符串（string）长度为5，默认左对齐（左边顶满），空格打右边去了，所以不对。（小于符号:\<5s表示左对齐，大于符号:\>表示右对齐）
 </div>
 </p>
 <p>8 下面语句的输出是：这是数字输出格式□□123。   □表示空格
 print("这是数字输出格式{:5d}".format(123))
  
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>正确:</strong> 
+  <strong>正确:</strong> :5d是指数字（digit）长度为5，默认右对齐，所以是正确的。（为什么数字是右对齐呢？看起来比较不习惯，是因为保留数字一般都是给高位留空，低位对齐（像竖式列两个数相加要把低位对齐一样）和字符串习惯不一样）
 </div>
 </p>
 <p>9 int(True)的返回值是1。<br />
  
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>正确:</strong> 
+  <strong>正确:</strong> True转成数字是1，False转成数字是0。如果是数字转bool，除了0转False其它全是True
 </div>
 </p>
 <p>10 bool(FALSE)的返回值是True。<br />
  
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>错误:</strong> 
+  <strong>错误:</strong> 首先FALSE是错误的拼法，Python区分大小写应该是False。会报错：NameError: name 'FALSE' is not defined. Did you mean: 'False'? 如果加上引号（单引号、双引号均可），则返回值是True（相当于bool一个非空字符串）。
 </div>
 </p>
 <p>11 bool([])的返回值是False。<br />
  
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>正确:</strong> 
+  <strong>正确:</strong> 一个空列表返回值是False。（列表是什么下一章会讲到）
 </div>
 </p>
 <p>12 bool(None)的返回值是False。
  
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>正确:</strong> 
+  <strong>正确:</strong> None即为空，返回False。
 </div>
 </p>
 <p>13 print(bin(12.5))的输出是0b1100.1</p>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>错误:</strong> 
+  <strong>错误:</strong> bin只能用于转换整数。
 </div>
 
 <p>14 int("92",8)的值是74。</p>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>错误:</strong> 
+  <strong>错误:</strong> 这个意思是92是八进制数，想要转成十进制，但八进制里不会出现9（7之后就进位了）。注意需要加引号。
 </div>
 
 <p>15 表达式3 and 0 and "hello"的值是False。 </p>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>错误:</strong> 
+  <strong>错误:</strong> 输出是0而不是False。
 </div>
 
 <p>16 z已赋值，x=(y=z+1)语句是错误语句  </p>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>正确:</strong> 
+  <strong>正确:</strong> 不能在表达式中进行赋值。但连续赋值x=y=z+1是可以的。需要留意一下。
 </div>
 
 <h3 id="_3">选择题</h3>
@@ -900,7 +900,7 @@ float</p>
 <p>D.
 list</p>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>A:</strong> 
+  <strong>A:</strong> Python的数据类型不含char，char是C等语言中含有的字符类型。可以使用```print(dir(__builtins__))```直接查看所有的内置类型和函数。
 </div>
 
 <p>2 Python 语句print(type(1J))的输出结果是<strong><em>_</em></strong><strong><em>_</em></strong>。</p>
@@ -913,7 +913,7 @@ list</p>
 <p>D.
 <class ‘dict’></p>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>A:</strong> 
+  <strong>A:</strong> 带j/J的类型是complex即复数类型。
 </div>
 
 <p>3 Python 语句print(type(1/2))的输出结果是<strong><em>_</em></strong><strong><em>_</em></strong>。</p>
@@ -926,7 +926,7 @@ list</p>
 <p>D.
 <class ‘double’></p>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>C:</strong> 
+  <strong>C:</strong> Python会自动计算出1/2是0.5，0.5是浮点数。需要注意Python没有double类型，double也是C等语言中的类型，意思是双精度浮点数。
 </div>
 
 <p>4 Python 语句print(type(1//2))的输出结果是<strong><em>_</em></strong><strong><em>_</em></strong>。</p>
@@ -939,7 +939,7 @@ list</p>
 <p>D.
 <class ‘double’></p>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>C:</strong> 
+  <strong>A:</strong> 1//2答案是0，整数除法的结果是整数。0的数据类型是int。
 </div>
 
 <p>5 Python 语句 a=121+1.21; print(type(a))的输出结果是<strong><em>_</em></strong>______。</p>
@@ -952,7 +952,7 @@ list</p>
 <p>D.
 <class ‘long’></p>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>B:</strong> 
+  <strong>B:</strong> Python中，整数和浮点数的加法，结果会是浮点数。注意不是字符串，因为两个数都是数字而没有任何一个是字符串。
 </div>
 
 <p>6 Python 语句 print(0xA + 0xB)的输出结果是<strong><em>_</em></strong><strong><em>_</em></strong>。</p>
@@ -965,7 +965,7 @@ A + B</p>
 <p>D.
 21</p>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>D:</strong> 
+  <strong>D:</strong> 0xA和0xB都是16进制数，加法会自动转换并输出十进制结果，即10+11=21.
 </div>
 
 <p>7 Python 语句x=’car’; y = 2; print (x+y)的输出结果是<strong><em>_</em></strong>_____。</p>
@@ -978,7 +978,7 @@ A + B</p>
 <p>D.
 'carcar’</p>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>A:</strong> 
+  <strong>A:</strong> 报错如下：TypeError: can only concatenate str (not "int") to str。即不能将数字和字符串进行拼接。
 </div>
 
 <p>8 表达式1+2*3.14&gt;0的结果类型是:</p>
@@ -991,7 +991,7 @@ float</p>
 <p>D.
 bool</p>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>D:</strong> 
+  <strong>D:</strong> 常见的计算顺序是幂运算(**)>正(+)负(-)号和按位取反(~)(不是加减！)>乘法(*)除法(/)整除(//)取模(%)>加(+)减(-)>位移(<<, >>)(左移和右移，可以理解成左移一位就是*2,右移一位就是//2)>按位与(&)>按位异或(^)>按位或(|)>比较运算(<, <=, >, >=, ==, !=) 所以最后一步计算的是比较，比较返回的是bool类型的值（即只有true和false）
 </div>
 
 <p>9 如math模块已引入，Python 表达式 math.sqrt(4)*math.sqrt(9)的值为<strong><em>_</em></strong>_</p>
@@ -1004,7 +1004,7 @@ bool</p>
 <p>D.
 6.0</p>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>D:</strong> 
+  <strong>D:</strong> 开根号输出的类型是浮点数，浮点数相乘还是会保留浮点数。
 </div>
 
 <p>10 关于Python中的复数，下列说法错误的是<strong><em>_</em></strong>____。</p>
@@ -1017,7 +1017,7 @@ bool</p>
 <p>D.
 方法conjugate 返回复数的共轭复数</p>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>C:</strong> 
+  <strong>C:</strong> 大小写都可以，其他都是正确的。可以记一下。
 </div>
 
 <p>11 Python 语句 print(chr(65))的运行结果是<strong><em>_</em></strong>____。</p>
@@ -1030,7 +1030,7 @@ bool</p>
 <p>D.
 A</p>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>D:</strong> 
+  <strong>D:</strong> 转成字符的函数是chr()，A是65的ASCII码。如果chr()里面的参数不在ASCII码范围内，则运行后什么都不输出。
 </div>
 
 <p>12 关于Python字符串，下列说法错误的是<strong><em>_</em></strong>____。</p>
@@ -1043,122 +1043,124 @@ A</p>
 <p>D.
 在三引号字符串中可以包含换行回车等特殊字符</p>
 <div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
-  <strong>B:</strong> 
+  <strong>B:</strong> 字符串在Python中没有结尾标志。\0结尾是C语言。
 </div>
 
 <h3 id="_4">填空题</h3>
 <p>1 Python 表达式 10 + 5//3 –True+False的值为
 10
 .</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 10 + 1 - 1 + 0 = 10
 
 </div>
 
 <p>2 Python 表达式 3<strong>2</strong>3 的值为
 6561</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 先算后面的2**3 原式=3**8=6561
 
 </div>
 
 <p>3 Python 表达式 round(17.0/3**2,2) 的值为
 1.89
 。</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 17.0/3**2=17.0/9=1.88888... round 后面是2的意思是保留2位小数四舍五入，所以是1.89
 
 </div>
 
-<p>4 Python 表达式 0 and 1 or not 2&lt;True 的值为
+<p>4 Python 表达式 0 and 1 or not 2 &lt; True 的值为
 True
 。</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 先算not 2 答案是False 然后算1 or False 然后前面的项是False 所以是True（比较运算返回值是True或者False而不是1或者0）
+
 </div>
+
 <p>5 Python 语句 print(int("20", 16), int("101",2))的输出结果是
 32 5
 。</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 16进制的20和2进制的101转成10进制，注意默认空一格。
 
 </div>
 
 <p>6 Python 语句 print(hex(16), bin(10))的输出结果是(进制用小写字母表示）
 0x10 0b1010
 。</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 
 
 </div>
 
 <p>7 已知 a=3; b=5; c=6; d=True, 则表达式 not d or a&gt;=0 and a+c&gt;b+3的值是
 True
 。</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> False or True and True是True
 
 </div>
 
 <p>8 Python 语句 print(abs(-10.2), round(abs(8-2j),3)) 的输出结果是
 10.2 8.246
 。</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 绝对值就是数学上的绝对值 复数绝对值就是求模长(注意要四舍五入保留三位小数)
 
 </div>
 
 <p>9 Python 语句 x=True; y=False; z=False; print(x or y and z)的程序运行结果是
 True
 。</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 注意：先算and 再算or
 
 </div>
 
 <p>10 Python 语句 x=0; y= True; print(x&gt;=y and‘A'&lt;'B') 的程序运行结果是
 False
 。</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 0>=1是错误的（有空格不影响）
 
 </div>
 
 <p>11 Python 表达式 16-25&gt;78/2 or "XYZ"!="xyz"and not (10-6&gt;18/2)的值是
 True
 。</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 先把逻辑运算留下 -9 > 39 or True and not (4>9) 即 False or True and True 即 True
 
 </div>
 
 <p>12  Python输出 print("hello" 'world')的结果是
 helloworld
 。</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> Python可以直接这样输出连续字符串，不需要打逗号 单引号双引号是等效的
 
 </div>
 
 <p>13 表达式((2&gt;=2) or (2&lt;2)) and 2的值为多少？
 2</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> (True or False) and 2 即 True and 2 Python计算and会有逻辑短路（其他语言同样会）——第一个部分若为False则返回0，不会计算第二个部分。否则返回第二个部分的值。eg：0 and 2 = 0，3 and 2 = 2，2 and 3 = 3
 
 </div>
 
 <p>14 表达式 3 and 0 and 5的结果是什么？
 0
 。</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 有一个是0 连续and肯定是0
 
 </div>
 
 <p>15 表达式 --3 的结果是什么？
 3
 。</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 负负得正
 
 </div>
 
 <p>16 表达式 ---3 的结果是什么？
 -3
 。</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 负负负得负
 
 </div>
 
 <p>17 表达式32.2//6-24//6的值是
 1.0
 。</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 5.0-4(注意小数计算整除会保留浮点数，返回.0，整数计算整除直接返回整数)，浮点和整数计算会自动转成浮点数。
 
 </div>
 
@@ -1179,14 +1181,14 @@ print((lst1[0] if s[0]=="1" else 0)
         +(lst3[0] if s[2]=="1" else 0)
         +(lst4[0] if s[3]=="1" else 0)
         +(lst5[0] if s[4]=="1" else 0))</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 这个原理类似于把19拆成16+0+0+2+1 每一位如果有 就加lst对应的值，如果不理解可以自己尝试一下~
 
 </div>
 
 <p>19 汉字张的Unicode编码是
 24352
  。</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 直接百度，考试不考。
 
 </div>
 
@@ -1201,7 +1203,7 @@ print((lst1[0] if s[0]=="1" else 0)
 。
  ~9 的结果是
 -10</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 都转成二进制码来算，-7->1001,5->0101取and->0001 -7->11001(记住你写的最高位是符号位，最后再转就可以了，不需要一定要补到多少位),9->01001取or->11001 -7->11001,9->01001取xor->10000 9->01001取反10110 注意返回值都是十进制数
 
 </div>
 
@@ -1214,7 +1216,7 @@ while n&gt;0:
     n,remainder = divmod(n,2)
     remainders.insert(0,remainder)
 print(len(remainders))</p>
-<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;">
+<div style="border-left: 4px solid #2196F3; background-color: #2c3e50; padding: 10px; margin: 20px 0; color: white;"> 这个程序就是求39转成二进制之后有多少位，100111是6位
 
 </div>
 
