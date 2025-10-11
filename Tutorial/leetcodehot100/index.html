@@ -2372,10 +2372,18 @@ q.pop_front();
 <p>这个思想是动态规划的思想 在pre[i]+x和x中间选一个大的</p>
 <p>分治算法也可以（找左边最大，右边最大，左边连右边最大）</p>
 <h3 id="-56">合并区间-56</h3>
-<p>按照first元素对intervals排序 注意lambda表达式写法</p>
+<p>按照first元素对intervals排序 注意lambda表达式写法
+如果按照后一个元素排序，处理不了[2,3],[4,5].[1,10]类似这样的，因为[2,3]已经放进答案里了，[1,10]才出现</p>
 <pre><code>sort(intervals.begin(),intervals.end(),[](vector&lt;int&gt; &amp;a,vector&lt;int&gt; &amp;b){
             return a[0]&lt;b[0];
         });
+</code></pre>
+<pre><code>static bool Compare(const vector&lt;int&gt; &amp;a,const vector&lt;int&gt; &amp;b){
+    return a[0]&lt;b[0];
+}    
+
+// 如果在同一个类里面 Compare需要声明为static const要不要都可以 
+sort(intervals.begin(),intervals.end(),Compare);
 </code></pre>
 <p>判断待加入的左端点和当前右端点的大小，如果待加入左端点大，那就分开；如果当前右端点大，就合并与更新右端点</p>
 <h3 id="-189">轮转数组-189</h3>
