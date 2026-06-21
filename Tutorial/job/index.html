@@ -600,6 +600,195 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    一些杂七杂八的游戏评价
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            一些杂七杂八的游戏评价
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Essay/wymgpj/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    《超侦探事件簿 雾雨谜宫》游戏评价
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Essay/wymgjq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    《超侦探事件簿 雾雨谜宫》剧情概括
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Essay/nz1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    《逆转裁判》《弹丸论破》相关评价-1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Essay/brzj/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    《百日战纪 -最终防卫学园-》游戏评价
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Essay/shlt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    《山河旅探》游戏评价
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Essay/nz2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    《逆转裁判》相关评价-2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Essay/mc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    《魔法少女的魔女审判》游戏评价
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -694,10 +883,10 @@
 还有就是测试不同版本的代码的性能差异，效果差异，反馈结果。原有一些测试代码，但测试的是老版本的，对这部分代码更新。
 还有自动生成一些数据集，用于训练图像识别模型。</p>
 <p>遇到的困难：写一个函数调用封装好的二维码识别函数，对图集进行识别，把结果存进文件夹里面。是Python代码，调用C++封装好的函数，使用了共享内存(shared_memory)机制，（一开始是共享内存的名字不一致，导致无法进入共享内存，发现：打断点，Python跑一半，直接调exe文件(subprocess.run(xx.exe,参数)，还是运行不了）然后发现共享内存的名字不一致。最后发现是开了多线程调用C++函数，同时对共享内存进行读写（把线程数调成1 发现结果正确）最后给多线程加了个锁 lock = threading.Lock() with lock: 来解决问题</p>
-<h2 id="_1">智力题</h2>
+<h2 id="_1">智力题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>https://www.nowcoder.com/discuss/374239272688254976</p>
 <p>https://www.nowcoder.com/discuss/353155459769114624</p>
-<h2 id="_2">数据库</h2>
+<h2 id="_2">数据库<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>索引
 https://blog.csdn.net/weixin_51486343/article/details/113351092</p>
 <p>ACID
@@ -708,7 +897,7 @@ https://zhuanlan.zhihu.com/p/24326786152</p>
 https://www.cnblogs.com/kyoner/p/11318979.html</p>
 <p>两阶段提交
 https://blog.csdn.net/qq_33591903/article/details/122030252</p>
-<h2 id="c">C++</h2>
+<h2 id="c">C++<a class="headerlink" href="#c" title="Permanent link">&para;</a></h2>
 <p>八股
 https://blog.csdn.net/songbijian/article/details/132507421</p>
 <p>设计模式

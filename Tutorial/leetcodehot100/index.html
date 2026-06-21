@@ -1423,6 +1423,195 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    一些杂七杂八的游戏评价
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            一些杂七杂八的游戏评价
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Essay/wymgpj/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    《超侦探事件簿 雾雨谜宫》游戏评价
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Essay/wymgjq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    《超侦探事件簿 雾雨谜宫》剧情概括
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Essay/nz1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    《逆转裁判》《弹丸论破》相关评价-1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Essay/brzj/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    《百日战纪 -最终防卫学园-》游戏评价
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Essay/shlt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    《山河旅探》游戏评价
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Essay/nz2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    《逆转裁判》相关评价-2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Essay/mc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    《魔法少女的魔女审判》游戏评价
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -2244,10 +2433,10 @@
   
 
 
-<h1 id="leetcode-hot100">Leetcode hot100中的题目</h1>
+<h1 id="leetcode-hot100">Leetcode hot100中的题目<a class="headerlink" href="#leetcode-hot100" title="Permanent link">&para;</a></h1>
 <p>大家可以用题号or名字检索 部分题目有C++代码~</p>
-<h2 id="_1">哈希</h2>
-<h3 id="-1">两数之和-1</h3>
+<h2 id="_1">哈希<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="-1">两数之和-1<a class="headerlink" href="#-1" title="Permanent link">&para;</a></h3>
 <p>(1)暴力双循环 n^2复杂度</p>
 <p>(2)哈希表 记录nums[i]和i </p>
 <pre><code>unordered_map&lt;int, int&gt; mp; // C++
@@ -2261,7 +2450,7 @@ if(it!=mp.end()); // 找到
 return {it-&gt;second,i}; // 返回格式是[x,y]
 </code></pre>
 <p>这题注意先查hash表再放入 防止自己和自己匹配</p>
-<h3 id="-49">字母异位词分组-49</h3>
+<h3 id="-49">字母异位词分组-49<a class="headerlink" href="#-49" title="Permanent link">&para;</a></h3>
 <pre><code>unordered_map&lt;string,vector&lt;string&gt;&gt; mp; // hash表存排列前的string和原string们
 
 // 遍历hash表：
@@ -2276,16 +2465,16 @@ for(auto it=mp.begin();it!=mp.end();++it)
 }
 
 </code></pre>
-<h3 id="-128">最长连续序列-128</h3>
+<h3 id="-128">最长连续序列-128<a class="headerlink" href="#-128" title="Permanent link">&para;</a></h3>
 <p>用一个unordered_set存这些数 然后遍历set 慢慢+1去找</p>
 <p>这里注意剪枝 如果当前元素-1在set中 那么就跳过（从那个-1开始肯定比这个长）</p>
 <p>或者用hash表存当前元素和包含当前元素的序列长度，每次遍历一个新元素时，如果当前元素-1/+1/都在hash表中，更新当前元素的长度和左边缘、右边缘的hash表值。</p>
-<h2 id="_2">双指针</h2>
-<h3 id="-283">移动零-283</h3>
+<h2 id="_2">双指针<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="-283">移动零-283<a class="headerlink" href="#-283" title="Permanent link">&para;</a></h3>
 <p>双指针遍历 一开始left=right=0 while(right &lt; size) 如果nums[right]是0 right右移 不然就交换 left++ right++</p>
-<h3 id="-11">盛最多水的容器-11</h3>
+<h3 id="-11">盛最多水的容器-11<a class="headerlink" href="#-11" title="Permanent link">&para;</a></h3>
 <p>左右两个指针放最边上 然后往中间移动 移矮的那个（因为移高的不可能有收益）</p>
-<h3 id="-15">三数之和-15</h3>
+<h3 id="-15">三数之和-15<a class="headerlink" href="#-15" title="Permanent link">&para;</a></h3>
 <p>先排序 第一个数从头遍历 二、三个数用双指针在后面找 注意第一个数需要去重</p>
 <pre><code>vector&lt;vector&lt;int&gt;&gt; ans;
 int n=nums.size();
@@ -2317,7 +2506,7 @@ for(int i=0;i&lt;n;i++)
 }
 return ans;
 </code></pre>
-<h3 id="-42">接雨水-42</h3>
+<h3 id="-42">接雨水-42<a class="headerlink" href="#-42" title="Permanent link">&para;</a></h3>
 <ul>
 <li>从左往右遍历 记录每个柱子左边最高的柱子 从右往左遍历 记录每个柱子右边最高的柱子 然后竖向来看 能存的就是min(左max,右max)-当前高度</li>
 </ul>
@@ -2345,8 +2534,8 @@ for(int i=0;i&lt;n;i++)
 }
 return ans;
 </code></pre>
-<h2 id="_3">滑动窗口</h2>
-<h3 id="-3">无重复字符的最长子串-3</h3>
+<h2 id="_3">滑动窗口<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="-3">无重复字符的最长子串-3<a class="headerlink" href="#-3" title="Permanent link">&para;</a></h3>
 <p>套双循环 用一个unordered_set当前有的字符</p>
 <pre><code>unordered_set&lt;char&gt; st;
 int right=0;
@@ -2363,13 +2552,13 @@ for(int i=0;i&lt;s.size();i++)
 }
 return maxlen;
 </code></pre>
-<h3 id="-438">找到字符串中所有字母异位词-438</h3>
+<h3 id="-438">找到字符串中所有字母异位词-438<a class="headerlink" href="#-438" title="Permanent link">&para;</a></h3>
 <p>用<code>vector&lt;int&gt; sCount(26)</code>来存当前窗口的情况 在循环中，移出一个，加一个</p>
 <p>判断两个vector是否相等可以直接用<code>sCount==pCount</code></p>
-<h2 id="_4">子串</h2>
-<h3 id="k-560">和为k的子数组-560</h3>
+<h2 id="_4">子串<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="k-560">和为k的子数组-560<a class="headerlink" href="#k-560" title="Permanent link">&para;</a></h3>
 <p>算前缀和并且加入hash表中 使用<code>unordered_map</code>存储每个前缀和及其出现的次数 遍历过程中直接去找想要的前缀和 总和数目直接加想要的前缀和的数量 O(n)复杂度一次遍历</p>
-<h3 id="-239">滑动窗口最大值-239</h3>
+<h3 id="-239">滑动窗口最大值-239<a class="headerlink" href="#-239" title="Permanent link">&para;</a></h3>
 <p>一个优先队列存所有数和下标，遍历i同时i往后移动，取当前优先队列最大值，如果下标不在窗口范围内，移出，再取直到在范围内。</p>
 <pre><code>priority_queue&lt;pair&lt;int, int&gt;&gt; q; //C++
 
@@ -2385,14 +2574,14 @@ q.pop_back();
 q.push_back(); 
 q.pop_front();
 </code></pre>
-<h3 id="-76">最小覆盖子串-76</h3>
+<h3 id="-76">最小覆盖子串-76<a class="headerlink" href="#-76" title="Permanent link">&para;</a></h3>
 <p>滑动窗口的思路 用hash表存储需要的字符 先滑右边界 满足后尝试缩小左边界 看能不能继续缩小子串 </p>
-<h2 id="_5">普通数组</h2>
-<h3 id="-53">最大子数组和-53</h3>
+<h2 id="_5">普通数组<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="-53">最大子数组和-53<a class="headerlink" href="#-53" title="Permanent link">&para;</a></h3>
 <p>经典题目 遍历过程中维护一个当前和 如果当前和小于0 则将当前和置为0 否则当前和加当前值 O(n)复杂度</p>
 <p>这个思想是动态规划的思想 在pre[i]+x和x中间选一个大的</p>
 <p>分治算法也可以（找左边最大，右边最大，左边连右边最大）</p>
-<h3 id="-56">合并区间-56</h3>
+<h3 id="-56">合并区间-56<a class="headerlink" href="#-56" title="Permanent link">&para;</a></h3>
 <p>按照first元素对intervals排序 注意lambda表达式写法
 如果按照后一个元素排序，处理不了[2,3],[4,5].[1,10]类似这样的，因为[2,3]已经放进答案里了，[1,10]才出现</p>
 <pre><code>sort(intervals.begin(),intervals.end(),[](vector&lt;int&gt; &amp;a,vector&lt;int&gt; &amp;b){
@@ -2407,7 +2596,7 @@ q.pop_front();
 sort(intervals.begin(),intervals.end(),Compare);
 </code></pre>
 <p>判断待加入的左端点和当前右端点的大小，如果待加入左端点大，那就分开；如果当前右端点大，就合并与更新右端点</p>
-<h3 id="-189">轮转数组-189</h3>
+<h3 id="-189">轮转数组-189<a class="headerlink" href="#-189" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>可以理解成先整个数组反转 然后前k%n个反转 和后一半反转</p>
@@ -2416,10 +2605,10 @@ sort(intervals.begin(),intervals.end(),Compare);
 <p>直接开额外空间存 然后放到对应位置也可以</p>
 </li>
 </ul>
-<h3 id="-238">除自身以外数组的乘积-238</h3>
+<h3 id="-238">除自身以外数组的乘积-238<a class="headerlink" href="#-238" title="Permanent link">&para;</a></h3>
 <p>维护一个前缀积 这样ans[0]是1 ans[n]是前n-1个元素的积 </p>
 <p>然后从后面维护一个后缀积 ans[n]*=后缀积 返回ans即可</p>
-<h3 id="-41">缺失的第一个正数-41</h3>
+<h3 id="-41">缺失的第一个正数-41<a class="headerlink" href="#-41" title="Permanent link">&para;</a></h3>
 <p>原地hash 遍历一遍 让该去自己位置的元素都去自己的位置（不该去的不用管）
 遍历到i这个位置的时候 只要让nums[i]这个元素去它对应的位置就好了(如果新来的元素也能去 那就必须也要去 所以要套while而不是if)</p>
 <p>然后从头开始找一遍即可</p>
@@ -2428,13 +2617,13 @@ sort(intervals.begin(),intervals.end(),Compare);
 
 // 如果最后一个判断条件是 nums[i]-1!=i 那么会死循环(eg:[1,1]情况 在1下标这个位置 1 1一直换)  
 </code></pre>
-<h2 id="_6">矩阵</h2>
-<h3 id="-73">矩阵置零-73</h3>
+<h2 id="_6">矩阵<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="-73">矩阵置零-73<a class="headerlink" href="#-73" title="Permanent link">&para;</a></h3>
 <p>先记录第一行和第一列是否有0 然后以第一行（列）为标志位记录这一列（行）是否有0</p>
 <p>先把标志位所在行（列）置0 然后如果第一行（列）有0 就置0</p>
-<h3 id="-54">螺旋矩阵-54</h3>
+<h3 id="-54">螺旋矩阵-54<a class="headerlink" href="#-54" title="Permanent link">&para;</a></h3>
 <p>按层模拟</p>
-<h3 id="-48">旋转图像-48</h3>
+<h3 id="-48">旋转图像-48<a class="headerlink" href="#-48" title="Permanent link">&para;</a></h3>
 <p>遍历i,j的时候只需要记录左上角的1/4就可以，因为四个换位置一圈就保证了所有</p>
 <pre><code>for(int i=0;i&lt;(n+1)/2;i++)
 {
@@ -2442,7 +2631,7 @@ sort(intervals.begin(),intervals.end(),Compare);
     {}
 }
 </code></pre>
-<h3 id="ii-240">搜索二维矩阵II-240</h3>
+<h3 id="ii-240">搜索二维矩阵II-240<a class="headerlink" href="#ii-240" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>对每一行二分查找 O(mlogn)</p>
@@ -2451,8 +2640,8 @@ sort(intervals.begin(),intervals.end(),Compare);
 <p>Z型查找 左下角开始 如果比想要的数字大 就排除了一行(x--) 小则排除了一列(y++) O(m+n)</p>
 </li>
 </ul>
-<h2 id="_7">链表</h2>
-<h3 id="-160">相交链表-160</h3>
+<h2 id="_7">链表<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="-160">相交链表-160<a class="headerlink" href="#-160" title="Permanent link">&para;</a></h3>
 <ul>
 <li>两个链表同时往后移 p1走到末尾就移到p2的头 p2走到末尾就移到p1的头 那么就会相遇（都走了自己的开始未相交部分 相交部分 对方的未相交部分） 如果不想交 那么就是走完自己 走完对方以后 同时是null 所以就可以跳出while</li>
 </ul>
@@ -2469,12 +2658,12 @@ return pa;
 <ul>
 <li>hash表存链表的节点</li>
 </ul>
-<h3 id="-206">反转链表-206</h3>
+<h3 id="-206">反转链表-206<a class="headerlink" href="#-206" title="Permanent link">&para;</a></h3>
 <p>当前元素是cur 上一个元素是pre while(cur!=nullptr) 记录tmp是下一个 cur-&gt;next=pre pre=cur cur=tmp 最后return的是pre 因为最后一步之后 cur已经是最后一个的next了 pre才是最后一个</p>
 <p>递归也是一样的思路 返回值是ListNode*类型</p>
-<h3 id="-234">回文链表-234</h3>
+<h3 id="-234">回文链表-234<a class="headerlink" href="#-234" title="Permanent link">&para;</a></h3>
 <p>翻转以后 两个链表一起移动 或者翻转一半</p>
-<h3 id="-141">环形链表-141</h3>
+<h3 id="-141">环形链表-141<a class="headerlink" href="#-141" title="Permanent link">&para;</a></h3>
 <p>快慢指针 如果快指针到null就直接退出来（不存在环 不然已经回去和慢指针相遇了）</p>
 <pre><code>while(fast!=nullptr)
 {
@@ -2484,7 +2673,7 @@ return pa;
     slow=slow-&gt;next;
 }
 </code></pre>
-<h3 id="ii-142">环形链表II-142</h3>
+<h3 id="ii-142">环形链表II-142<a class="headerlink" href="#ii-142" title="Permanent link">&para;</a></h3>
 <ul>
 <li>这题要找到入环的节点 可以先让快慢指针在环中相遇</li>
 </ul>
@@ -2495,11 +2684,11 @@ return pa;
 <ul>
 <li>直接hash表记录也可以</li>
 </ul>
-<h3 id="-21">合并两个有序链表-21</h3>
+<h3 id="-21">合并两个有序链表-21<a class="headerlink" href="#-21" title="Permanent link">&para;</a></h3>
 <p>可以创建一个dummy 然后两个链表在while中套 </p>
-<h3 id="-2">两数相加-2</h3>
+<h3 id="-2">两数相加-2<a class="headerlink" href="#-2" title="Permanent link">&para;</a></h3>
 <p>保留一个进位 创建一个新链表存结果 就从个位（链表头）开始加 每加一位相当于尾插法</p>
-<h3 id="n-19">删除链表的倒数第N个节点-19</h3>
+<h3 id="n-19">删除链表的倒数第N个节点-19<a class="headerlink" href="#n-19" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>计算出长度后 从头遍历 数数来删</p>
@@ -2508,7 +2697,7 @@ return pa;
 <p>双指针 使用两个指针 first比second超前n个节点 first到末尾时 second就是倒数第n个</p>
 </li>
 </ul>
-<h3 id="-24">两两交换链表中的节点-24</h3>
+<h3 id="-24">两两交换链表中的节点-24<a class="headerlink" href="#-24" title="Permanent link">&para;</a></h3>
 <p>标记first second third</p>
 <pre><code>ListNode *dummy=new ListNode();
 dummy-&gt;next=head;
@@ -2526,7 +2715,7 @@ while(cur-&gt;next&amp;&amp;cur-&gt;next-&gt;next){
 }
 return dummy-&gt;next;
 </code></pre>
-<h3 id="k-25">K个一组翻转链表-25</h3>
+<h3 id="k-25">K个一组翻转链表-25<a class="headerlink" href="#k-25" title="Permanent link">&para;</a></h3>
 <p>写一个翻转链表的函数</p>
 <p>注意翻转完之后 头节点和尾节点的连接都要处理 比如0 1 2 3 翻转的是1 2 然后0要连2（这个通过head-&gt;next=prev;实现） 1要连3（这个通过一开始把prev置为tail而不是null 最开始递归的时候实现）</p>
 <p>下面这个也要注意：先建一个dummy节点 然后走过k个之后 调用函数的tail是下一个 比如k=2 一开始从0开始走 走两步 到2 tail是下一个3 然后翻转链表函数的返回值是新链表的curr也就是1 这个节点是下一次调用的头节点 还有一个判断是如果没走完k步就到null了 直接返回dummy-&gt;next 不要翻转了 如果翻转完之后 tail为null 就返回</p>
@@ -2565,11 +2754,11 @@ ListNode* reverseKGroup(ListNode* head, int k) {
     return dummy-&gt;next;
 }
 </code></pre>
-<h3 id="-138">随机链表的复制-138</h3>
+<h3 id="-138">随机链表的复制-138<a class="headerlink" href="#-138" title="Permanent link">&para;</a></h3>
 <p>先遍历一遍 得到一个next完成的链表 并用hash表存一个原节点到新节点的对应</p>
 <p>再遍历一遍 把random指针指向新节点</p>
 <p>这样虽然麻烦但思路很清晰</p>
-<h3 id="-148">排序链表-148</h3>
+<h3 id="-148">排序链表-148<a class="headerlink" href="#-148" title="Permanent link">&para;</a></h3>
 <p>可以用归并排序 采用递归 从上到下 注意最后merge的是两个子链表 所以要切断链表避免有环等情况</p>
 <pre><code>ListNode* sortList(ListNode* head) {
     return sortList(head,nullptr);
@@ -2622,7 +2811,7 @@ ListNode *merge(ListNode *l1,ListNode *l2)
     return dummy-&gt;next;
 }
 </code></pre>
-<h3 id="k-23">合并K个升序链表-23</h3>
+<h3 id="k-23">合并K个升序链表-23<a class="headerlink" href="#k-23" title="Permanent link">&para;</a></h3>
 <p>可以写成递归形式 两两合并 中间二分 不然单个链表会比较长</p>
 <pre><code>ListNode *Two(ListNode *a,ListNode *b){
     if(a==nullptr||b==nullptr)return a?a:b;
@@ -2651,7 +2840,7 @@ ListNode* mergeKLists(vector&lt;ListNode*&gt;&amp; lists) {
     return merge(lists,0,lists.size()-1);
 }
 </code></pre>
-<h3 id="lru-146">LRU缓存-146</h3>
+<h3 id="lru-146">LRU缓存-146<a class="headerlink" href="#lru-146" title="Permanent link">&para;</a></h3>
 <p>要一个双向链表存信息，一个<code>unordered_map&lt;int,DLinkedNode*&gt;</code>存cache
 一个size 一个capacity来维护</p>
 <p>每次get从map中找到节点 然后在链表中移到头部 </p>
@@ -2776,17 +2965,17 @@ public:
     }
 };
 </code></pre>
-<h2 id="_8">二叉树</h2>
-<h3 id="-94">二叉树的中序遍历-94</h3>
+<h2 id="_8">二叉树<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="-94">二叉树的中序遍历-94<a class="headerlink" href="#-94" title="Permanent link">&para;</a></h3>
 <p>递归 注意返回条件 函数开始写个如果nullptr就返回 后面就不用判断是否为null了 直接遍历</p>
 <p>迭代 用栈</p>
-<h3 id="-104">二叉树的最大深度-104</h3>
+<h3 id="-104">二叉树的最大深度-104<a class="headerlink" href="#-104" title="Permanent link">&para;</a></h3>
 <pre><code>int maxDepth(TreeNode* root) {
     if(root==nullptr)return 0;
     return max(maxDepth(root-&gt;left),maxDepth(root-&gt;right))+1;
 }
 </code></pre>
-<h3 id="-226">翻转二叉树-226</h3>
+<h3 id="-226">翻转二叉树-226<a class="headerlink" href="#-226" title="Permanent link">&para;</a></h3>
 <pre><code>TreeNode* swap(TreeNode *root)
 {
     if(root!=nullptr)
@@ -2805,7 +2994,7 @@ TreeNode* invertTree(TreeNode* root) {
     return root;
 }
 </code></pre>
-<h3 id="-101">对称二叉树-101</h3>
+<h3 id="-101">对称二叉树-101<a class="headerlink" href="#-101" title="Permanent link">&para;</a></h3>
 <pre><code>bool Judge(TreeNode* root1,TreeNode* root2)
 {
     if(root1==nullptr&amp;&amp;root2==nullptr)return true;
@@ -2818,7 +3007,7 @@ bool isSymmetric(TreeNode* root) {
     return Judge(root-&gt;left,root-&gt;right);
 }
 </code></pre>
-<h3 id="-543">二叉树的直径-543</h3>
+<h3 id="-543">二叉树的直径-543<a class="headerlink" href="#-543" title="Permanent link">&para;</a></h3>
 <p>dfs到每个节点的时候，记录每个节点的左右子树的直径，然后加起来和ans比较</p>
 <pre><code>int ans=0;
 int getD(TreeNode* root){
@@ -2835,7 +3024,7 @@ int diameterOfBinaryTree(TreeNode* root) {
     return ans;
 }
 </code></pre>
-<h3 id="-102">二叉树的层序遍历-102</h3>
+<h3 id="-102">二叉树的层序遍历-102<a class="headerlink" href="#-102" title="Permanent link">&para;</a></h3>
 <p>用队列广搜</p>
 <pre><code>if(root==nullptr)return {};
 queue&lt;TreeNode *&gt; q;
@@ -2883,18 +3072,18 @@ vector&lt;vector&lt;int&gt;&gt; levelOrder(TreeNode* root) {
     return ans;
 }
 </code></pre>
-<h3 id="-108">将有序数组转换为二叉搜索树-108</h3>
+<h3 id="-108">将有序数组转换为二叉搜索树-108<a class="headerlink" href="#-108" title="Permanent link">&para;</a></h3>
 <p>先把中间节点建好 向两边递归</p>
-<h3 id="-98">验证二叉搜索树-98</h3>
+<h3 id="-98">验证二叉搜索树-98<a class="headerlink" href="#-98" title="Permanent link">&para;</a></h3>
 <p>可以中序遍历然后判断是否递增</p>
 <p>或者递归判断（注意最大值是INT_MAX,然后有等号是否 所以最大要开到比INT_MAX大，可以来LONG_MAX）</p>
-<h3 id="k-230">二叉搜索树种第K小的元素-230</h3>
+<h3 id="k-230">二叉搜索树种第K小的元素-230<a class="headerlink" href="#k-230" title="Permanent link">&para;</a></h3>
 <p>中序遍历 找第k个元素</p>
-<h3 id="-199">二叉树的右视图-199</h3>
+<h3 id="-199">二叉树的右视图-199<a class="headerlink" href="#-199" title="Permanent link">&para;</a></h3>
 <p>递归的时候记录层数 把每层最后一个节点存到ans就行</p>
-<h3 id="-114">二叉树展开为链表-114</h3>
+<h3 id="-114">二叉树展开为链表-114<a class="headerlink" href="#-114" title="Permanent link">&para;</a></h3>
 <p>前序遍历 把所有遍历到的节点存到vector<TreeNode*>里面 最后修改每个node的指针</p>
-<h3 id="-105">从前序与中序遍历序列构造二叉树-105</h3>
+<h3 id="-105">从前序与中序遍历序列构造二叉树-105<a class="headerlink" href="#-105" title="Permanent link">&para;</a></h3>
 <p>前序的第一个就是根 然后在中序中找到根 左边的都是左子树 右边的都是右子树 递归</p>
 <pre><code>unordered_map&lt;int,int&gt; mp;
 TreeNode *dfs(vector&lt;int&gt;&amp; preorder, vector&lt;int&gt;&amp; inorder,int prel,int prer,int inl,int inr)
@@ -2918,7 +3107,7 @@ TreeNode* buildTree(vector&lt;int&gt;&amp; preorder, vector&lt;int&gt;&amp; inor
     return dfs(preorder,inorder,0,preorder.size(),0,inorder.size());
 }
 </code></pre>
-<h3 id="iii-437">路径总和III-437</h3>
+<h3 id="iii-437">路径总和III-437<a class="headerlink" href="#iii-437" title="Permanent link">&para;</a></h3>
 <p>维护一个前缀和的map 注意map要随着遍历去更新 dfs搜下去 这个点搜完了 就把这个点的前缀和从map中-1 注意初始化：前缀和为0有1条路径（就是啥都不取）</p>
 <pre><code>unordered_map&lt;long long,int&gt; prefix;
 int ret=0;
@@ -2942,7 +3131,7 @@ int pathSum(TreeNode* root, int targetSum) {
     return ret;
 }
 </code></pre>
-<h3 id="-236">二叉树的最近公共祖先-236</h3>
+<h3 id="-236">二叉树的最近公共祖先-236<a class="headerlink" href="#-236" title="Permanent link">&para;</a></h3>
 <p>判断：p是root或者q是root或者root是空 返回root
 递归左边 递归右边
 如果都有 就返回root
@@ -2958,12 +3147,12 @@ int pathSum(TreeNode* root, int targetSum) {
 }
 </code></pre>
 <p>如果是二叉搜索树 判断p，q节点值和当前节点大小 如果都大于root 就在root的右子树 如果都小于root 就在root的左子树 如果一大一小 就是root 不需要判断是不是空 因为不可能会到空节点</p>
-<h3 id="-124">二叉树中的最大路径和-124</h3>
+<h3 id="-124">二叉树中的最大路径和-124<a class="headerlink" href="#-124" title="Permanent link">&para;</a></h3>
 <p>先求每个节点的最大贡献值（node-&gt;val+max(左节点的max(最大贡献值,0)+右节点的max(最大贡献值,0))） </p>
 <p>作为返回值（只能算上一边 因为这个节点不作为根节点 就不能两边的路都走） </p>
 <p>同时更新最大值（左右两边都算上）</p>
-<h2 id="_9">图论</h2>
-<h3 id="-200">岛屿数量-200</h3>
+<h2 id="_9">图论<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h3 id="-200">岛屿数量-200<a class="headerlink" href="#-200" title="Permanent link">&para;</a></h3>
 <p>dfs遍历 记得标记已经遍历过的格子</p>
 <pre><code>void dfs(vector&lt;vector&lt;char&gt;&gt;&amp; grid,int x,int y)
 {
@@ -2998,15 +3187,15 @@ int numIslands(vector&lt;vector&lt;char&gt;&gt;&amp; grid) {
     return cnt;
 }
 </code></pre>
-<h3 id="-994">腐烂的橘子-994</h3>
+<h3 id="-994">腐烂的橘子-994<a class="headerlink" href="#-994" title="Permanent link">&para;</a></h3>
 <p>bfs遍历 用一个队列存当前腐烂的和时间</p>
 <p>while(!Q.empty()) 要记录还有没有新鲜橘子 没有就直接break</p>
 <p>二维数组也可以memset(dis, -1, sizeof(dis)) / memset(dis, -1, sizeof dis)</p>
-<h3 id="-207">课程表-207</h3>
+<h3 id="-207">课程表-207<a class="headerlink" href="#-207" title="Permanent link">&para;</a></h3>
 <p>拓扑排序 不存在环就ok </p>
 <p>可以用 <code>unordered_map&lt;int, vector&lt;int&gt;&gt;</code>存邻接表 用<code>vector&lt;int&gt;</code>存入度 </p>
 <p>bfs更好理解 用一个队列存可以的节点 慢慢出 时间复杂度O(n+m) (时间复杂度深搜广搜都一样)</p>
-<h3 id="trie-208">实现Trie（前缀树）-208</h3>
+<h3 id="trie-208">实现Trie（前缀树）-208<a class="headerlink" href="#trie-208" title="Permanent link">&para;</a></h3>
 <p>需要用一个标记来表示是否走到底 不然没法确定是前缀还是真的有这个字符串</p>
 <pre><code>class Trie {
 private:
@@ -3052,8 +3241,8 @@ public:
     }
 };
 </code></pre>
-<h2 id="_10">回溯</h2>
-<h3 id="-46">全排列-46</h3>
+<h2 id="_10">回溯<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h3 id="-46">全排列-46<a class="headerlink" href="#-46" title="Permanent link">&para;</a></h3>
 <p>和组合的差距：拿了后面的元素 还要回去拿前面的元素
 所以套一个循环在Back函数内部 然后用used记录是否拿过这个元素 而不是下标递增的方式
 也不需要尝试放该元素or不放 因为所有的都会被放 只是顺序问题</p>
@@ -3083,7 +3272,7 @@ vector&lt;vector&lt;int&gt;&gt; permute(vector&lt;int&gt;&amp; nums) {
     return keep;
 }
 </code></pre>
-<h3 id="-78">子集-78</h3>
+<h3 id="-78">子集-78<a class="headerlink" href="#-78" title="Permanent link">&para;</a></h3>
 <p>标准的回溯</p>
 <pre><code>vector&lt;int&gt; t;
 vector&lt;vector&lt;int&gt;&gt; ans;
@@ -3103,15 +3292,15 @@ vector&lt;vector&lt;int&gt;&gt; subsets(vector&lt;int&gt;&amp; nums) {
     return ans;
 }
 </code></pre>
-<h3 id="-17">电话号码的字母组合-17</h3>
+<h3 id="-17">电话号码的字母组合-17<a class="headerlink" href="#-17" title="Permanent link">&para;</a></h3>
 <p>和上一题很类似</p>
-<h3 id="-39">组合总和-39</h3>
+<h3 id="-39">组合总和-39<a class="headerlink" href="#-39" title="Permanent link">&para;</a></h3>
 <p>注意每个数可以被选取多次 所以dfs调用的时候 下标不能后移 而是根据和来判断</p>
-<h3 id="-22">括号生成-22</h3>
+<h3 id="-22">括号生成-22<a class="headerlink" href="#-22" title="Permanent link">&para;</a></h3>
 <p>dfs的时候记录左括号和右括号数量</p>
-<h3 id="-79">单词搜索-79</h3>
+<h3 id="-79">单词搜索-79<a class="headerlink" href="#-79" title="Permanent link">&para;</a></h3>
 <p>遍历每个点作为起点 dfs中记录已经走了几步 走完了就true</p>
-<h3 id="-131">分割回文串-131</h3>
+<h3 id="-131">分割回文串-131<a class="headerlink" href="#-131" title="Permanent link">&para;</a></h3>
 <p>回溯+dp 先用dp数组保存哪些子串是回文串</p>
 <p>然后dfs保存一个当前起点 套一个i循环作为长度回溯</p>
 <pre><code>vector&lt;vector&lt;string&gt;&gt; ret;
@@ -3156,7 +3345,7 @@ vector&lt;vector&lt;string&gt;&gt; partition(string s) {
     return ret;
 }
 </code></pre>
-<h3 id="n-51">N皇后-51</h3>
+<h3 id="n-51">N皇后-51<a class="headerlink" href="#n-51" title="Permanent link">&para;</a></h3>
 <p>可以用一维数组来存每行放在第几列</p>
 <pre><code>bool JudgeOK(vector&lt;int&gt; &amp;row,vector&lt;int&gt; &amp;column,int l,int c)
 {
@@ -3206,11 +3395,11 @@ vector&lt;vector&lt;string&gt;&gt; solveNQueens(int n) {
     return solutions;
 }
 </code></pre>
-<h2 id="_11">二分查找</h2>
-<h3 id="-35">搜索插入位置-35</h3>
+<h2 id="_11">二分查找<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<h3 id="-35">搜索插入位置-35<a class="headerlink" href="#-35" title="Permanent link">&para;</a></h3>
 <p>经典二分 如果不存在就返回要插入的位置 最后返回left就行了 while里面是left&lt;=right </p>
 <p>比如1 3 5 6找2 mid=3 然后right=0 然后left=1之后break掉 return 1</p>
-<h3 id="-74">搜索二维矩阵-74</h3>
+<h3 id="-74">搜索二维矩阵-74<a class="headerlink" href="#-74" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>把矩阵展成一维的然后二分</p>
@@ -3219,7 +3408,7 @@ vector&lt;vector&lt;string&gt;&gt; solveNQueens(int n) {
 <p>左下角or右上角开始 一次排除一行or一列</p>
 </li>
 </ul>
-<h3 id="-34">在排序数组中查找元素的第一个和最后一个位置-34</h3>
+<h3 id="-34">在排序数组中查找元素的第一个和最后一个位置-34<a class="headerlink" href="#-34" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>可以找第一个&gt;=target的作为左边界 &gt;target的-1作为右边界</p>
@@ -3228,7 +3417,7 @@ vector&lt;vector&lt;string&gt;&gt; solveNQueens(int n) {
 <p>找target-0.5和target+0.5</p>
 </li>
 </ul>
-<h3 id="-33">搜索旋转排序数组-33</h3>
+<h3 id="-33">搜索旋转排序数组-33<a class="headerlink" href="#-33" title="Permanent link">&para;</a></h3>
 <p>先确认数组中最小的元素下标 再联合首元素和target判断是去前半部分找还是后半部分找</p>
 <p>找最小值：需要时刻更新minn 注意&gt;=minn 2 1 正确情况：mid=0 left=1 mid=1 可以更新minn 错误情况：mid=0 right=0 right=-1 跑出去了 mincur是0</p>
 <pre><code>int left=0,right=nums.size()-1;
@@ -3248,9 +3437,9 @@ while(left&lt;=right)
     }
 }
 </code></pre>
-<h3 id="-153">寻找旋转排序数组中的最小值-153</h3>
+<h3 id="-153">寻找旋转排序数组中的最小值-153<a class="headerlink" href="#-153" title="Permanent link">&para;</a></h3>
 <p>上一题代码</p>
-<h3 id="_12">寻找两个正序数组的中位数</h3>
+<h3 id="_12">寻找两个正序数组的中位数<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <p>递归 找两个数组前k/2个元素（k要减小） 每次排除一半的元素 如果第一个数组的元素小于第二个数组的 说明第一个的前k/2个都不是中位数（第k个元素）</p>
 <p>注意奇数个和偶数个的情况</p>
 <pre><code>double findMedianSortedArrays(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2) {
@@ -3282,41 +3471,41 @@ int getKth(vector&lt;int&gt;&amp; nums1,int start1,int end1,vector&lt;int&gt;&am
     }
 }
 </code></pre>
-<h1 id="_13">栈</h1>
-<h3 id="-20">有效的括号-20</h3>
+<h1 id="_13">栈<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h1>
+<h3 id="-20">有效的括号-20<a class="headerlink" href="#-20" title="Permanent link">&para;</a></h3>
 <p>如果是([{就入栈 是)]}就出一个比较（注意栈非空 否则直接返回false） 注意最后栈要是空的</p>
-<h3 id="-155">最小栈-155</h3>
+<h3 id="-155">最小栈-155<a class="headerlink" href="#-155" title="Permanent link">&para;</a></h3>
 <p>关键是栈的性质 每个元素入栈时记录当前元素入栈后 栈内元素的最小值 求最小值的时候直接就可以拿出来 Keep.push_back(min(val,Keep[Keep.size()-1]))</p>
 <p>如果不使用额外空间，在栈中保存当前值和最小值的差 注意如果当前元素是最小值 push的差值不要是0 而是那个负数 不然这个元素出栈以后 之前的信息恢复不了</p>
 <p>元素出栈的时候 如果栈元素小于0 说明当前值是最小值 恢复最小值 如果栈元素大于0 直接出栈 </p>
 <p>注意需要开long long</p>
-<h3 id="-394">字符串解码-394</h3>
+<h3 id="-394">字符串解码-394<a class="headerlink" href="#-394" title="Permanent link">&para;</a></h3>
 <p>开一个数字栈和字符串栈 如果遇到左括号 当前数字和字符串入栈 如果遇到右括号 栈顶字符串+当前字符串乘以数字以后成为新的当前字符串 栈顶字符串出栈</p>
 <p>3[a2[c]] 3入栈 a入栈 2入栈 当前字符串变成acc a 2出栈 当前字符串变成accaccacc 3出栈</p>
-<h3 id="-739">每日温度-739</h3>
+<h3 id="-739">每日温度-739<a class="headerlink" href="#-739" title="Permanent link">&para;</a></h3>
 <p>单调栈做法：在O(n)时间复杂度下求数组中各元素右侧第一个更大的元素和其下标</p>
 <p>性质：单调栈存储的下标中 对应的温度列表中的温度依次递减 </p>
 <p>遍历下标 如果栈空：入栈 如果栈非空：栈顶温度大于当前温度：入栈 栈顶温度小于当前温度：栈顶元素出栈 栈顶元素的下一个高温就是当前元素 然后继续看下一个栈顶元素 </p>
 <p>元素遍历完以后 如果栈中还有下标 那就是找不到下一个高温</p>
-<h3 id="-84">柱状图中最大的矩形-84</h3>
+<h3 id="-84">柱状图中最大的矩形-84<a class="headerlink" href="#-84" title="Permanent link">&para;</a></h3>
 <p>利用单调栈存每个柱子当前左边比它矮的第一个 右边比它矮的第一个
 一开始初始化left全是-1 right全是n 最后面积是right-left-1 这样不用特判最边上（比如最左边那个 左边没有比它矮的 left=-1 右边第一个就比它矮 right=1 他的宽只有它自身就是1 right-left-1也是1 正好对上）</p>
-<h2 id="_14">堆</h2>
-<h3 id="k-215">数组中的第K个最大元素-215</h3>
+<h2 id="_14">堆<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h3 id="k-215">数组中的第K个最大元素-215<a class="headerlink" href="#k-215" title="Permanent link">&para;</a></h3>
 <p>维护一个大根堆 全放进去 出k-1个</p>
 <pre><code>priority_queue&lt;int, vector&lt;int&gt;&gt; Heap;
 priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; Heap; // 小根堆
 </code></pre>
-<h3 id="k-347">前K个高频元素-347</h3>
+<h3 id="k-347">前K个高频元素-347<a class="headerlink" href="#k-347" title="Permanent link">&para;</a></h3>
 <p>先用hash表记录每个元素出现次数 再维护一个小根堆 每次都移出最小的堆顶元素（保持堆尺寸&lt;=k） 这样剩的就是最大的</p>
-<h3 id="-295">数据流的中位数-295</h3>
+<h3 id="-295">数据流的中位数-295<a class="headerlink" href="#-295" title="Permanent link">&para;</a></h3>
 <p>两个堆 一个堆放小的一半 一个堆放大的一半 注意维护两个堆的大小（差距为1or相等）</p>
-<h2 id="_15">贪心算法</h2>
-<h3 id="-121">买卖股票的最佳时机-121</h3>
+<h2 id="_15">贪心算法<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<h3 id="-121">买卖股票的最佳时机-121<a class="headerlink" href="#-121" title="Permanent link">&para;</a></h3>
 <p>遍历数组 在每一天考虑：如果我是在历史最低点买入的 那我当前卖出能赚多少 然后max(以前，当天) 所以遍历的同时用一个变量记录历史最低点</p>
-<h3 id="-55">跳跃游戏-55</h3>
+<h3 id="-55">跳跃游戏-55<a class="headerlink" href="#-55" title="Permanent link">&para;</a></h3>
 <p>遍历数组每一个下标 更新能到达的最远距离 如果遍历过程中 有i&gt;最远距离 说明到不了 false 否则就是true</p>
-<h3 id="ii-45">跳跃游戏II-45</h3>
+<h3 id="ii-45">跳跃游戏II-45<a class="headerlink" href="#ii-45" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>反向查找 从最后一个位置开始 选能到的最远的位置 O(n^2)复杂度</p>
@@ -3327,23 +3516,23 @@ priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; Heap; // 小根
 </ul>
 <p>例如 一开始只能到0 维护0能到的最远位置 为2 然后要走一步了 步数+1 最远位置为2 然后看1 2能到的最远位置 1能到4 然后要走一步了 步数+1 发现到4了 结束</p>
 <p>这个过程一开始设置end=0 遍历i 从0到n-1 maxpos=max(maxpos,i+nums[i]) if(i==end) end=maxpos 更新最远位置 ans++ </p>
-<h3 id="-763">划分字母区间-763</h3>
+<h3 id="-763">划分字母区间-763<a class="headerlink" href="#-763" title="Permanent link">&para;</a></h3>
 <p>用一个表格记录每个字母最远位置的元素</p>
 <p>从头开始遍历 并用新字母的最远位置和原有的最远位置取个max 如果遍历到最远元素 就ok了 记录当前的长度 然后继续遍历直到结束</p>
-<h2 id="_16">动态规划</h2>
-<h3 id="-70">爬楼梯-70</h3>
+<h2 id="_16">动态规划<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<h3 id="-70">爬楼梯-70<a class="headerlink" href="#-70" title="Permanent link">&para;</a></h3>
 <p>初始化dp[0]=dp[1]=1 dp[n]=dp[n-1]+dp[n-2] (或者不管0 直接初始化1和2 这样更有道理一点)</p>
-<h3 id="-118">杨辉三角-118</h3>
+<h3 id="-118">杨辉三角-118<a class="headerlink" href="#-118" title="Permanent link">&para;</a></h3>
 <p>dp[i][j]=dp[i-1][j-1]+dp[i-1][j]</p>
-<h3 id="-198">打家劫舍-198</h3>
+<h3 id="-198">打家劫舍-198<a class="headerlink" href="#-198" title="Permanent link">&para;</a></h3>
 <p>dp[i]=max(dp[i-1],dp[i-2]+nums[i])</p>
-<h3 id="-279">完全平方数-279</h3>
+<h3 id="-279">完全平方数-279<a class="headerlink" href="#-279" title="Permanent link">&para;</a></h3>
 <pre><code>for(int j=1;j*j&lt;i;j++)
 {
     minn=min(minn,dp[i-j*j]+1);
 }
 </code></pre>
-<h3 id="-322">零钱兑换-322</h3>
+<h3 id="-322">零钱兑换-322<a class="headerlink" href="#-322" title="Permanent link">&para;</a></h3>
 <p>完全背包：每个元素无限多</p>
 <p>i 金额(体积) j 硬币(物品)</p>
 <p>一开始可以把dp数组都设成amount+1（因为最多就是amount个硬币，最后可以通过判断dp[amount]是否是amount+1判断是否有解）</p>
@@ -3359,7 +3548,7 @@ for(int i=1;i&lt;=amount;i++)
 }
 </code></pre>
 <p>关于时间复杂度 外层循环枚举物品的写法，只会遍历物品数组一次；而内层循环枚举物品的写法，会遍历物品数组多次。从 cache 的角度分析，多次遍历数组会导致额外的 cache miss，带来额外的开销。所以虽然这两种写法的时间空间复杂度是一样的，但外层循环枚举物品的写法常数更小。（来自0x3f)</p>
-<h3 id="-139">单词拆分-139</h3>
+<h3 id="-139">单词拆分-139<a class="headerlink" href="#-139" title="Permanent link">&para;</a></h3>
 <p>把所有单词都存入一个unordered_set 字符串从短开始遍历</p>
 <pre><code>dp[0]=true;
 for(int i=1;i&lt;=s.size();i++)
@@ -3374,7 +3563,7 @@ for(int i=1;i&lt;=s.size();i++)
     }
 }
 </code></pre>
-<h3 id="-300">最长递增子序列-300</h3>
+<h3 id="-300">最长递增子序列-300<a class="headerlink" href="#-300" title="Permanent link">&para;</a></h3>
 <p>dp[i]表示以s[i]结尾的最长递增子序列的长度（注意要s[i]结尾）</p>
 <p>这样递推公式就很自然：每个i 遍历之前的j 如果s[j]&lt;s[i] 那么dp[i]=max(dp[i],dp[j]+1)</p>
 <pre><code>int maxx=0;
@@ -3391,10 +3580,10 @@ for(int i=0;i&lt;n;i++)
     maxx=max(maxx,dp[i]);
 }
 </code></pre>
-<h3 id="-152">乘积最大子数组-152</h3>
+<h3 id="-152">乘积最大子数组-152<a class="headerlink" href="#-152" title="Permanent link">&para;</a></h3>
 <p>两个变量存到当前的最大乘积和到当前的最小乘积（包括当前的） 一个变量存整体的最大（不需要包含当前）</p>
 <p>遍历数组 如果当前是正数 就更新当前的最大乘积maxx=max(nums[i],maxx<em>nums[i]) 最小乘积minn=min(nums[i],minn</em>nums[i]); 如果当前是负数 可以先把最大和最小换个位置 然后更新最大乘积和最小乘积 注意更新完之后都要更新整体的最大</p>
-<h3 id="-416">分割等和子集-416</h3>
+<h3 id="-416">分割等和子集-416<a class="headerlink" href="#-416" title="Permanent link">&para;</a></h3>
 <p>01背包问题 选or不选一个 最后总量是总和/2</p>
 <p>可以把dp数组设成bool i表示数字 j表示和 dp[i][j]表示前i个数能否组成和为j 也可以把数组设成int 每个东西重量和价值都是nums[i] 最后判断dp[n-1][target]是否等于target</p>
 <p>需要注意初始化</p>
@@ -3430,7 +3619,7 @@ for(int i=1;i&lt;n;i++)
 }
 return dp[n-1][target];
 </code></pre>
-<h3 id="-32">最长有效括号-32</h3>
+<h3 id="-32">最长有效括号-32<a class="headerlink" href="#-32" title="Permanent link">&para;</a></h3>
 <p>如果当前括号是右括号 说明最长有效括号长度可能增加 去看上一个 如果是左 那就是dp[i]=dp[i-2]+2(判断有没有i-2)</p>
 <p>如果是右 去找i-dp[i-1]-1位置(因为dp[i-1]就代表带上它 它之前的这么多个元素组成了一组有效括号 去看这群的上一个是啥) 如果是左 就这一大段也是有效括号 加上 如果是右 无事发生</p>
 <pre><code>int longestValidParentheses(string s) {
@@ -3465,8 +3654,8 @@ return dp[n-1][target];
     return maxx;
 }
 </code></pre>
-<h2 id="_17">多维动态规划</h2>
-<h3 id="-62">不同路径-62</h3>
+<h2 id="_17">多维动态规划<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<h3 id="-62">不同路径-62<a class="headerlink" href="#-62" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>直接组合数计算 相当于共动m-1+n-1下 选m-1下往下 共有几种路径 C(m-1+n-1,m-1)</p>
@@ -3475,9 +3664,9 @@ return dp[n-1][target];
 <p>dp 先初始dp[i][0] dp[0][j]为1 然后dp[i][j]=dp[i-1][j]+dp[i][j-1]</p>
 </li>
 </ul>
-<h3 id="-64">最小路径和-64</h3>
+<h3 id="-64">最小路径和-64<a class="headerlink" href="#-64" title="Permanent link">&para;</a></h3>
 <p>dp[i][j] = min(dp[i - 1][j], dp[i][j - 1]) + grid[i][j];</p>
-<h3 id="-5">最长回文子串-5</h3>
+<h3 id="-5">最长回文子串-5<a class="headerlink" href="#-5" title="Permanent link">&para;</a></h3>
 <p>中心扩散法 有一个精妙的点是可以在外层i遍历中心的时候 内层j设置为0 1 然后l=i r=i+j</p>
 <pre><code>int n=s.size();
 int maxlen=0;
@@ -3534,7 +3723,7 @@ for(int len=2;len&lt;=n;len++)
 }
 return s.substr(begin,maxLen);
 </code></pre>
-<h3 id="-1143">最长公共子序列-1143</h3>
+<h3 id="-1143">最长公共子序列-1143<a class="headerlink" href="#-1143" title="Permanent link">&para;</a></h3>
 <p>dp[i][j]表示s1[0,i]和s2[0,j]的最长公共子序列的长度</p>
 <p>注意一开始初始化dp[0][x]和dp[x][0]全为0</p>
 <pre><code>for(int i=1;i&lt;=r;i++)
@@ -3551,7 +3740,7 @@ return s.substr(begin,maxLen);
     }
 }
 </code></pre>
-<h3 id="-72">编辑距离-72</h3>
+<h3 id="-72">编辑距离-72<a class="headerlink" href="#-72" title="Permanent link">&para;</a></h3>
 <p>// dp[i][j]:1的前i个和2的前j个的距离(注意要初始化的是前0个(就是有空串的情况))</p>
 <pre><code>int m=word1.size();
 int n=word2.size();
@@ -3578,11 +3767,11 @@ for(int i=1;i&lt;m+1;i++)
 }
 return dp[m][n];
 </code></pre>
-<h2 id="_18">技巧</h2>
-<h3 id="-136">只出现一次的数字-136</h3>
+<h2 id="_18">技巧<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<h3 id="-136">只出现一次的数字-136<a class="headerlink" href="#-136" title="Permanent link">&para;</a></h3>
 <p>全部元素异或（两个相同元素异或为0）剩下的元素是什么 什么就只出现了一次</p>
 <p>其他方法 如用集合存元素 没有就加 有就删； hash表存元素和次数 再遍历； 集合元素两倍-数组元素和 空间都是O(n)</p>
-<h3 id="-169">多数元素-169</h3>
+<h3 id="-169">多数元素-169<a class="headerlink" href="#-169" title="Permanent link">&para;</a></h3>
 <p>每次从数组中删除两个不同的元素 遍历完后 肯定剩下的就是众数</p>
 <pre><code>int x=0,vote=0;
 for(int i=0;i&lt;nums.size();i++)
@@ -3593,15 +3782,15 @@ for(int i=0;i&lt;nums.size();i++)
 }
 return x;
 </code></pre>
-<h3 id="-75">颜色分类-75</h3>
+<h3 id="-75">颜色分类-75<a class="headerlink" href="#-75" title="Permanent link">&para;</a></h3>
 <ul>
 <li>开双指针 把0都挪动到前面 2都挪动到后面</li>
 </ul>
 <p>需要注意把2挪到前面的时候，过来的可能还是2 需要套个while</p>
-<h3 id="-31">下一个排列-31</h3>
+<h3 id="-31">下一个排列-31<a class="headerlink" href="#-31" title="Permanent link">&para;</a></h3>
 <p>从后往前找非递增的第一个 比如4 5 2 6 3 1这个 6 3 1已经没有操作空间了 最大了 找到2 然后从后面找第一个比2大的就是3 然后2 3换一下 4 5 3 6 2 1然后给3后面的逆序一下</p>
 <p>如果整个是递减的 相当于把整个数组逆序一下</p>
-<h3 id="-287">寻找重复数-287</h3>
+<h3 id="-287">寻找重复数-287<a class="headerlink" href="#-287" title="Permanent link">&para;</a></h3>
 <p>快慢指针 相当于建立映射 就是判断是否有环</p>
 <p>最后还要找到入环的点 相当于建一个从头跑的指针和slow指针一起再跑 类似于环形链表II-142</p>
 

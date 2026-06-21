@@ -5,3 +5,17 @@
     border-radius: 50%; /* 设置头像为圆形 */
     object-fit: cover;  /* 保持图片比例，避免拉伸 */
 }
+
+/* 友链卡片居中 */
+.grid.cards {
+  text-align: center;
+}
+
+/* 头像圆角 + hover 动效（可选但很好看）*/
+.grid.cards img {
+  transition: transform 0.25s ease;
+}
+
+.grid.cards img:hover {
+  transform: scale(1.05);
+}
