@@ -41,6 +41,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://Muzibing.github.io/Frontend/frontend_hooks/</loc>
+         <lastmod>2026-06-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://Muzibing.github.io/Frontend/frontend_js/</loc>
+         <lastmod>2026-06-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://Muzibing.github.io/Tutorial/about/</loc>
          <lastmod>2026-06-22</lastmod>
          <changefreq>daily</changefreq>
